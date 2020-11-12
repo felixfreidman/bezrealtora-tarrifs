@@ -1,3 +1,4 @@
+/* Шрифты жирный и обычный */
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
@@ -11,6 +12,8 @@
 body {
   font-family: "Roboto";
 }
+/* Версия по умолчанию, на экраны 1376х1176 */
+/* Стили самой страницы */
 .main {
   display: flex;
   flex-direction: column;
@@ -18,22 +21,26 @@ body {
   justify-content: center;
   background-color: #fff;
 }
+/* Стили секции с тарифами */
 .main_rate {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
+/* Стили оглавления */
 .main_header {
   font-weight: 700;
   font-size: 30px;
   margin-bottom: 180px;
 }
+/* Стили секции с карточками */
 .main_rate-section {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+/* Стили для каждой карты */
 .main_rate-card {
   display: flex;
   flex-direction: column;
@@ -45,10 +52,7 @@ body {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
-
-.first {
-  margin-right: 60px;
-}
+/* Картинка в оглавлении */
 .main_rate-image {
   width: 250px;
   height: 250px;
@@ -57,17 +61,24 @@ body {
   z-index: 10;
   margin-bottom: -20%;
 }
+/* Отступ первой карточки от второй */
+.first {
+  margin-right: 60px;
+}
+/* Оглавление в самом описание */
 .rate_header {
   font-weight: 700;
   font-size: 20px;
   text-align: center;
   margin-bottom: 30px;
 }
+/* Описание тарифа */
 .rate-description {
   font-size: 15px;
   color: #808080;
   margin-bottom: 50px;
 }
+/* Стили для неупорядоченного списка */
 ul {
   list-style: none;
   margin: 0;
@@ -85,6 +96,7 @@ ul {
   margin-bottom: 20px;
 }
 
+/* Начало стилей для таблицы и радио кнопок */
 .first-rate_table-header {
   font-size: 18px;
   margin-bottom: 14px;
@@ -92,12 +104,10 @@ ul {
 .first-rate_table-body {
   width: 100%;
 }
-
 .period-checkbox {
   display: none;
 }
-
-.table-body_table-row  {
+.table-body_table-row {
   display: flex;
 }
 .table-body_table-row label {
@@ -124,7 +134,6 @@ ul {
   align-items: center;
 }
 
-
 .table-body-selling-badge {
   background: url("../Sources/badgeBackground.png") no-repeat;
   font-size: 12px;
@@ -143,21 +152,22 @@ ul {
   color: black;
 }
 
- label:hover {
+label:hover {
   color: black;
 }
 
 input:checked + label {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   color: black;
 }
+/* Конец стилей для таблицы и радио кнопок */
 
-
-
+/* Цена тарифа */
 .rate-price-first {
   margin-top: 66px;
   font-size: 50px;
 }
+/* Стили для формы в которой содержится кнопка */
 .rate_form {
   width: 100%;
   margin-top: 25px;
@@ -165,9 +175,10 @@ input:checked + label {
   align-items: center;
   justify-content: center;
 }
+/* Стили для кнопки оформления тарифа */
 .rate_button {
   width: 80%;
-  background-color: #5DC087;
+  background-color: #5dc087;
   color: white;
   height: 58px;
   font-size: 24px;

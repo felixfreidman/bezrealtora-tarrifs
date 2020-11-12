@@ -7,19 +7,21 @@
     <title>Bezrealtora</title>
   </head>
   <body>
-    <!-- Dictionary:
+    <!-- Словарь:
         rate - тариф
         coupon - купон
         benefits - преимущества
         faq - frquently asked questions
         qaa - questions and answers
      -->
-    <!-- Place for the HEADER block -->
+    <!-- HEADER block -->
 
     <div class="main">
       <section class="main_rate">
+          <!-- Поделил секцию тарифов на 2 части, оглавление и само описание -->
         <span class="main_header">Выберете удобный тариф</span>
         <div class="main_rate-section">
+            <!-- Первая карточка, class First отвечает за внешний отступ справа -->
           <div class="main_rate-card first">
             <img
               src="./Sources/first-rate.svg"
@@ -49,6 +51,7 @@
             <span class="first-rate_table-header"
               >Выберете период доступа к базе собственников</span
             >
+            <!-- Ячейки таблицы - это радиокнопки, нужны для скриптов. Значение будет передаваться в кнопку -->
             <div class="first-rate_table-body">
               <div class="table-body_table-row">
                 <input
@@ -101,6 +104,7 @@
                 
               </div>
             </div>
+            <!-- Конец таблицы -->
             <span class="rate-price-first">599 ₽</span>
             <form action="#" method="post" class = "rate_form">
               <input
@@ -112,6 +116,8 @@
               />
             </form>
           </div>
+          <!-- Конец первой карточки -->
+          <!-- Вторая карточка тарифов -->
           <div class="main_rate-card">
             <img
               src="./Sources/second-rate.svg"
@@ -183,8 +189,10 @@
               />
             </form>
           </div>
+          <!-- Конец второй карточки -->
         </div>
       </section>
+      <!-- Конец секции тарифов -->
       <section class="main_coupon">
         <img src="" alt="" />
         <div class="main_coupon-info">
@@ -226,7 +234,7 @@
       <section class="main_qaa"></section>
     </div>
 
-    <!-- Place for the FOOTER block -->
+    <!-- FOOTER block -->
     <script src="./Scripts/index-script.js"></script>
   </body>
 </html>
