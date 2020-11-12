@@ -18,10 +18,80 @@
 
     <div class="main">
       <section class="main_rate">
-        <span class="main_header"></span>
+        <span class="main_header">Выберете удобный тариф</span>
         <div class="main_rate-section">
-          <div class="main_first-rate"></div>
-          <div class="main_second-rate"></div>
+          <div class="main_rate-card first">
+            <img src="./Sources/Images/first-rate.svg" alt=":(" class = "main_rate-image">
+              <span class="rate_header">Доступ к базе собственников</span>
+              <span class="rate-description">
+                Тариф подойдет Вам, если Вы хотите найти квартиру или другой объект от собственника самостоятельно в самой большой и актуальной базе недвижимости.
+              </span>
+              <ul class="rate_unordered-list">
+                  <li class="unordered-list_list-item">Доступ к объявлениям от собственников без ограничений</li>
+                  <li class="unordered-list_list-item">Блокируем мошенников и агентов со скрытой коммисией</li>
+                  <li class="unordered-list_list-item">Проверка собственника по Росреестру</li>
+                  <li class="unordered-list_list-item">Договор аренды и другие документы для сделки</li>
+              </ul>
+              <span class="first-rate_table-header">Выберете период доступа к базе собственников</span>
+              <table class="first-rate_table-body">
+                  <tr>
+                      <td>3 дня</td>
+                      <td class = "table-body_special-cell">14 дней
+                          <div class="table-body-selling-badge">Выбор 71%<br>пользователей</div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>7 дней</td>
+                      <td>30 дней</td>
+                  </tr>
+              </table>
+              <span class = "rate-price"></span>
+              <form action="#" method="post">
+                  <input type="button"  class = "rate-button" id = "firstRateButton" name = "firstRateButton" value="Подключить тариф">
+              </form>
+          </div>
+          <div class="main_rate-card">
+            <img src="./Sources/Images/second-rate.svg" alt=":(" class = "main_rate-image">
+            <span class="rate_header">Индивидуальный подбор недвижимости от собственника</span>
+            <span class="rate-description">
+              Тариф подойдет Вам, если Вы хотите, чтобы мы помогли Вам с поиском недвижимости от собственника. Мы возьмем поиск, подбор и провеку собственности на себя.
+            </span>
+            <ul class="rate_unordered-list">
+                <li class="unordered-list_list-item">Доступ к объявлениям от собственников без ограничений</li>
+                <li class="unordered-list_list-item">Блокируем мошенников и агентов со скрытой коммисией</li>
+                <li class="unordered-list_list-item">Проверка собственника по Росреестру</li>
+                <li class="unordered-list_list-item">Договор аренды и другие документы для сделки</li>
+                <li class="unordered-list_list-item">Выделенный личный помощник (полностью займется поиском для Вас)</li>
+                <li class="unordered-list_list-item">Поиск квартиры по всем источникам</li>
+                <li class="unordered-list_list-item">Ежедневная подборка, проверка и обзвон квартир по Вашим параметрам</li>
+            </ul>
+            
+                <select id = "rateChosenCity" form="secondRateForm" required>
+                    <option value disabled selected>Выберете город</option>
+                    <option value="Иркутск">Иркутск</option>
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Казань">Казань</option>
+                    <option value="Екатеринбург">Екатеринбург</option>
+                    <option value="Новосибирск">Новосибирск</option>
+                    <option value="Самара">Самара</option>
+                    <option value="Нижний Новгород">Нижний Новгород</option>
+                    <option value="Челябинск">Челябинск</option>
+                    <option value="Омск">Омск</option>
+                    <option value="Сочи">Сочи</option>
+                    <option value="Улан-Удэ">Улан-Удэ</option>
+                    <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                    <option value="Воронеж">Воронеж</option>
+                    <option value="Волгоград">Волгоград</option>
+                    <option value="Томск">Томск</option>
+                    <option value="Пермь">Пермь</option>
+                    <option value="Саратов">Саратов</option>
+                </select>
+            <span class = "rate-price"></span>
+            <form action="#" method="post" id = "secondRateForm">
+                <input type="button"  class = "rate-button" id = "firstRateButton" name = "firstRateButton" value="Подключить тариф">
+            </form>
+          </div>
         </div>
       </section>
       <section class="main_coupon">
