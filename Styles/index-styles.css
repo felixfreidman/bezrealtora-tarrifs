@@ -37,7 +37,7 @@ body {
 /* Стили секции с карточками */
 .main_rate-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 /* Стили для каждой карты */
@@ -46,7 +46,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 450px;
-  height: 1125px;
+  height: fit-content;
   padding: 0px 5% 50px 5%;
   background: #ffffff;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
@@ -57,7 +57,7 @@ body {
   width: 250px;
   height: 250px;
   position: relative;
-  bottom: 10%;
+  bottom: 15%;
   z-index: 10;
   margin-bottom: -20%;
 }
@@ -163,7 +163,7 @@ input:checked + label {
 /* Конец стилей для таблицы и радио кнопок */
 
 /* Цена тарифа */
-.rate-price-first {
+.rate_price {
   margin-top: 66px;
   font-size: 50px;
 }
@@ -190,4 +190,67 @@ input:checked + label {
 }
 .rate_button:active {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #F2F2F2;
+  background-image: none;
+  border-radius: 12px;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.rate_select {
+  z-index: 4;
+  position: relative;
+  display: flex;
+  width:60%;
+  height: 50px;
+  line-height: 3;
+  background: #F2F2F2;
+  overflow: hidden;
+  border-radius: 12px;
+  
+}
+select {
+  flex: 1;
+  padding: 0px 0px 0px 15px;
+  color: #808080;
+  cursor: pointer;
+}
+/* Arrow */
+.rate_select::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  background: #F2F2F2;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+/* Transition */
+.rate_select:active::after {
+  top: 50%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 0px solid black;
+  border-right: 0px solid black;
+  transform: rotate(45deg);
 }

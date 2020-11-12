@@ -105,7 +105,7 @@
               </div>
             </div>
             <!-- Конец таблицы -->
-            <span class="rate-price-first">599 ₽</span>
+            <span id="ratePriceFirst" class = "rate_price">599 ₽</span>
             <form action="#" method="post" class = "rate_form">
               <input
                 type="button"
@@ -156,29 +156,30 @@
                 параметрам
               </li>
             </ul>
-
-            <select id="rateChosenCity" form="secondRateForm" required>
-              <option value disabled selected>Выберете город</option>
-              <option value="Иркутск">Иркутск</option>
-              <option value="Москва">Москва</option>
-              <option value="Санкт-Петербург">Санкт-Петербург</option>
-              <option value="Казань">Казань</option>
-              <option value="Екатеринбург">Екатеринбург</option>
-              <option value="Новосибирск">Новосибирск</option>
-              <option value="Самара">Самара</option>
-              <option value="Нижний Новгород">Нижний Новгород</option>
-              <option value="Челябинск">Челябинск</option>
-              <option value="Омск">Омск</option>
-              <option value="Сочи">Сочи</option>
-              <option value="Улан-Удэ">Улан-Удэ</option>
-              <option value="Ростов-на-Дону">Ростов-на-Дону</option>
-              <option value="Воронеж">Воронеж</option>
-              <option value="Волгоград">Волгоград</option>
-              <option value="Томск">Томск</option>
-              <option value="Пермь">Пермь</option>
-              <option value="Саратов">Саратов</option>
-            </select>
-            <span class="rate-price"></span>
+            <div class="rate_select">
+                <select id="rateChosenCity" form="secondRateForm" required >
+                  <option value = "0" selected disabled>Выберете город</option>
+                  <option value="1">Иркутск</option>
+                  <option value="2">Москва</option>
+                  <option value="3">Санкт-Петербург</option>
+                  <option value="4">Казань</option>
+                  <option value="5">Екатеринбург</option>
+                  <option value="6">Новосибирск</option>
+                  <option value="7">Самара</option>
+                  <option value="8">Нижний Новгород</option>
+                  <option value="9">Челябинск</option>
+                  <option value="10">Омск</option>
+                  <option value="11">Сочи</option>
+                  <option value="12">Улан-Удэ</option>
+                  <option value="13">Ростов-на-Дону</option>
+                  <option value="14">Воронеж</option>
+                  <option value="15">Волгоград</option>
+                  <option value="16">Томск</option>
+                  <option value="17">Пермь</option>
+                  <option value="18">Саратов</option>
+                </select>
+              </div>
+            <span class="rate_price" id="ratePriceSecond">от 1.299 ₽</span>
             <form action="#" method="post" id="secondRateForm" class  = "rate_form">
               <input
                 type="button"
