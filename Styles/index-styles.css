@@ -75,7 +75,7 @@ ul {
 }
 .unordered-list_list-item {
   margin:0; padding:0;
-  background:url("../Sources/first-rate.svg") no-repeat 0 -3px;
+  background:url("../Sources/list_item.svg") no-repeat 0 -3px;
   padding-left:30px;  
   min-height: 30px; 
   font-size: 20px;
