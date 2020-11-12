@@ -51,20 +51,57 @@
             >
             <div class="first-rate_table-body">
               <div class="table-body_table-row">
-                <div class="table-row_table-data">3 дня</div>
-                <div class="table-row_table-data special-cell">
-                  14 дней
-                  <div class="table-body-selling-badge">
-                    <span class = "selling-badge_span">Выбор 71%<br />пользователей</span>
+                <input
+                type="radio"
+                name="accessPeriod"
+                id="3daysPeriod"
+                class="period-checkbox"
+              />
+                <label for="3daysPeriod">
+                  <div class="table-row_table-data">3 дня</div>
+                </label>
+                <input
+                  type="radio"
+                  name="accessPeriod"
+                  id="14daysPeriod"
+                  class="period-checkbox"
+                  checked
+                />
+                <label for="14daysPeriod">
+                  <div class="table-row_table-data special-cell">
+                    14 дней
+                    <div class="table-body-selling-badge">
+                      <span class="selling-badge_span"
+                        >Выбор 71%<br />пользователей</span
+                      >
+                    </div>
                   </div>
-                </div>
+                </label>
+                
               </div>
               <div class="table-body_table-row">
-                <div class="table-row_table-data">7 дней</div>
-                <div class="table-row_table-data">30 дней</div>
+                <input
+                type="radio"
+                name="accessPeriod"
+                id="7daysPeriod"
+                class="period-checkbox"
+              />
+                <label for="7daysPeriod">
+                  <div class="table-row_table-data">7 дней</div>
+                </label>
+                <input
+                  type="radio"
+                  name="accessPeriod"
+                  id="30daysPeriod"
+                  class="period-checkbox"
+                />
+                <label for="30daysPeriod">
+                  <div class="table-row_table-data">30 дней</div>
+                </label>
+                
               </div>
             </div>
-            <span class="rate-price"></span>
+            <span class="rate-price">599 ₽</span>
             <form action="#" method="post">
               <input
                 type="button"
@@ -188,7 +225,7 @@
       <section class="main_faq"></section>
       <section class="main_qaa"></section>
     </div>
-   
+
     <!-- Place for the FOOTER block -->
     <script src="./Scripts/index-script.js"></script>
   </body>
