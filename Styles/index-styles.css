@@ -57,7 +57,7 @@ body {
   width: 250px;
   height: 250px;
   position: relative;
-  bottom: 15%;
+  bottom: 130px;
   z-index: 10;
   margin-bottom: -20%;
 }
