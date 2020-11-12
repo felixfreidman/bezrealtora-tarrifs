@@ -158,3 +158,25 @@ input:checked + label {
   margin-top: 66px;
   font-size: 50px;
 }
+.rate_form {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rate_button {
+  width: 80%;
+  background-color: #5DC087;
+  color: white;
+  height: 58px;
+  font-size: 24px;
+  box-shadow: none;
+  font-family: "Roboto";
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.rate_button:active {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
