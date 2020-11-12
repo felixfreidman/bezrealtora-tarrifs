@@ -74,11 +74,63 @@ ul {
   padding: 0;
 }
 .unordered-list_list-item {
-  margin:0; padding:0;
-  background:url("../Sources/list_item.svg") no-repeat 0 -3px;
-  padding-left:30px;  
-  min-height: 30px; 
+  margin: 0;
+  padding: 0;
+  background: url("../Sources/list_item.svg") no-repeat 0 -3px;
+  padding-left: 30px;
+  min-height: 30px;
   font-size: 20px;
   line-height: 150%;
   color: #000;
+  margin-bottom: 20px;
+}
+
+.first-rate_table-header {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+.first-rate_table-body {
+  width: 100%;
+}
+
+.table-body_table-row {
+  display: flex;
+}
+.table-row_table-data {
+  background-color: #f2f2f2;
+  width: 50%;
+  height: 50px;
+  font-size: 22px;
+  margin: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 3px 3px 3px 10px;
+  cursor: pointer;
+  color: #808080;
+}
+
+
+.table-body-selling-badge {
+  background: url("../Sources/badgeBackground.png") no-repeat;
+  font-size: 12px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.selling-badge_span {
+  text-align: center;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.table-row_table-data:hover, .table-row_table-data:hover:active {
+  background-color: #D9D9D9;
+  color: black;
 }
