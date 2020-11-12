@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
-  src: url("/Fonts/Roboto-Regular.ttf");
+  src: url("BezRealtora/Fonts/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
-  src: url("/Fonts/Roboto-Bold.ttf");
+  src: url("BezRealtora/Fonts/Roboto-Bold.ttf");
 }
 body {
   font-family: "Roboto";
@@ -76,7 +76,7 @@ ul {
 }
 .unordered-list_list-item {
   margin:0; padding:0;
-  background:url("/Sources/list_item.svg") no-repeat 0 -3px;
+  background:url("/BezRealtora/Sources/first-rate.svg") no-repeat 0 -3px;
   padding-left:30px;  
   min-height: 30px; 
   font-size: 20px;
