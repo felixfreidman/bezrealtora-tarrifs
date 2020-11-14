@@ -20,6 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  padding: 51px 220px 114px 220px;
 }
 /* Стили секции с тарифами */
 .main_rate {
@@ -45,9 +46,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px;
+  width: 350px;
   height: fit-content;
-  padding: 0px 5% 50px 5%;
+  padding: 0px 2% 50px 2%;
   background: #ffffff;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -74,7 +75,7 @@ body {
 }
 /* Описание тарифа */
 .rate-description {
-  font-size: 15px;
+  font-size: 12px;
   color: #808080;
   margin-bottom: 50px;
 }
@@ -90,7 +91,7 @@ ul {
   background: url("../Sources/list_item.svg") no-repeat 0 -3px;
   padding-left: 30px;
   min-height: 30px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 150%;
   color: #000;
   margin-bottom: 20px;
@@ -98,8 +99,9 @@ ul {
 
 /* Начало стилей для таблицы и радио кнопок */
 .first-rate_table-header {
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 14px;
+  font-weight: bold;
 }
 .first-rate_table-body {
   width: 100%;
@@ -114,7 +116,7 @@ ul {
   background-color: #f2f2f2;
   width: 50%;
   height: 50px;
-  font-size: 22px;
+  font-size: 18px;
   margin: 2px;
   display: flex;
   justify-content: space-between;
@@ -136,7 +138,7 @@ ul {
 
 .table-body-selling-badge {
   background: url("../Sources/badgeBackground.png") no-repeat;
-  font-size: 12px;
+  font-size: 10px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -181,7 +183,7 @@ input:checked + label {
   background-color: #5dc087;
   color: white;
   height: 58px;
-  font-size: 24px;
+  font-size: 20px;
   box-shadow: none;
   font-family: "Roboto";
   border: none;
@@ -253,4 +255,68 @@ select {
   border-bottom: 0px solid black;
   border-right: 0px solid black;
   transform: rotate(45deg);
+}
+
+/*Стили для купона */
+
+.main_coupon {
+  margin-top: 105px;
+  display: flex;
+  background-color: #f2f2f2;
+  width: fit-content;
+  height: 250px;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.main_coupon-image {
+  width: 50%;
+}
+
+.main_coupon-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.main_coupon-header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.main_coupon-subheader {
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
+}
+.coupon-activation_form {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.coupon-activation_input {
+  outline: none;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 15px 10px;
+  color: grey;
+  border: none;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.coupon-activation_button {
+  outline: none;
+  border: none;
+  background-color: #E82431;
+  color: #fff;
+  border-radius: 8px;
+  padding: 15px 10px;
+  width: 45%;
+  font-size: 12px;
+  height: 100%;
 }
