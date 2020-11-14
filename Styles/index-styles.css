@@ -260,6 +260,7 @@ select {
 /*Стили для купона */
 
 .main_coupon {
+  position: relative;
   margin-top: 105px;
   display: flex;
   background-color: #f2f2f2;
@@ -319,4 +320,15 @@ select {
   width: 45%;
   font-size: 12px;
   height: 100%;
+}
+
+/* Стили для уголка купона */
+.main_coupon-corner {
+  position: absolute;
+  top:0;
+  left: 0;
+  border-right: #1C2443 50px solid ;
+  border-bottom: #1C2443 50px solid ;
+  border-top: #fff 50px solid  ;
+  border-left:  #fff 50px solid ;
 }
