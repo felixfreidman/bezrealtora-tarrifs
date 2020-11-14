@@ -18,13 +18,13 @@
 
     <div class="main">
       <section class="main_rate">
-          <!-- Поделил секцию тарифов на 2 части, оглавление и само описание -->
+        <!-- Поделил секцию тарифов на 2 части, оглавление и само описание -->
         <span class="main_header">Выберете удобный тариф</span>
         <div class="main_rate-section">
-            <!-- Первая карточка, class First отвечает за внешний отступ справа -->
+          <!-- Первая карточка, class First отвечает за внешний отступ справа -->
           <div class="main_rate-card first">
             <img
-              src="./Sources/first-rate.svg"
+              src="./Sources/Images/first-rate.svg"
               alt=":("
               class="main_rate-image"
             />
@@ -55,11 +55,11 @@
             <div class="first-rate_table-body">
               <div class="table-body_table-row">
                 <input
-                type="radio"
-                name="accessPeriod"
-                id="3daysPeriod"
-                class="period-checkbox"
-              />
+                  type="radio"
+                  name="accessPeriod"
+                  id="3daysPeriod"
+                  class="period-checkbox"
+                />
                 <label for="3daysPeriod">
                   <div class="table-row_table-data">3 дня</div>
                 </label>
@@ -80,15 +80,14 @@
                     </div>
                   </div>
                 </label>
-                
               </div>
               <div class="table-body_table-row">
                 <input
-                type="radio"
-                name="accessPeriod"
-                id="7daysPeriod"
-                class="period-checkbox"
-              />
+                  type="radio"
+                  name="accessPeriod"
+                  id="7daysPeriod"
+                  class="period-checkbox"
+                />
                 <label for="7daysPeriod">
                   <div class="table-row_table-data">7 дней</div>
                 </label>
@@ -101,12 +100,11 @@
                 <label for="30daysPeriod">
                   <div class="table-row_table-data">30 дней</div>
                 </label>
-                
               </div>
             </div>
             <!-- Конец таблицы -->
-            <span id="ratePriceFirst" class = "rate_price">599 ₽</span>
-            <form action="#" method="post" class = "rate_form">
+            <span id="ratePriceFirst" class="rate_price">599 ₽</span>
+            <form action="#" method="post" class="rate_form">
               <input
                 type="button"
                 class="rate_button"
@@ -120,7 +118,7 @@
           <!-- Вторая карточка тарифов -->
           <div class="main_rate-card">
             <img
-              src="./Sources/second-rate.svg"
+              src="./Sources/Images/second-rate.svg"
               alt=":("
               class="main_rate-image"
             />
@@ -157,30 +155,35 @@
               </li>
             </ul>
             <div class="rate_select">
-                <select id="rateChosenCity" form="secondRateForm" required >
-                  <option value = "0" selected disabled>Выберете город</option>
-                  <option value="1">Иркутск</option>
-                  <option value="2">Москва</option>
-                  <option value="3">Санкт-Петербург</option>
-                  <option value="4">Казань</option>
-                  <option value="5">Екатеринбург</option>
-                  <option value="6">Новосибирск</option>
-                  <option value="7">Самара</option>
-                  <option value="8">Нижний Новгород</option>
-                  <option value="9">Челябинск</option>
-                  <option value="10">Омск</option>
-                  <option value="11">Сочи</option>
-                  <option value="12">Улан-Удэ</option>
-                  <option value="13">Ростов-на-Дону</option>
-                  <option value="14">Воронеж</option>
-                  <option value="15">Волгоград</option>
-                  <option value="16">Томск</option>
-                  <option value="17">Пермь</option>
-                  <option value="18">Саратов</option>
-                </select>
-              </div>
+              <select id="rateChosenCity" form="secondRateForm" required>
+                <option value="0" selected disabled>Выберете город</option>
+                <option value="1">Иркутск</option>
+                <option value="2">Москва</option>
+                <option value="3">Санкт-Петербург</option>
+                <option value="4">Казань</option>
+                <option value="5">Екатеринбург</option>
+                <option value="6">Новосибирск</option>
+                <option value="7">Самара</option>
+                <option value="8">Нижний Новгород</option>
+                <option value="9">Челябинск</option>
+                <option value="10">Омск</option>
+                <option value="11">Сочи</option>
+                <option value="12">Улан-Удэ</option>
+                <option value="13">Ростов-на-Дону</option>
+                <option value="14">Воронеж</option>
+                <option value="15">Волгоград</option>
+                <option value="16">Томск</option>
+                <option value="17">Пермь</option>
+                <option value="18">Саратов</option>
+              </select>
+            </div>
             <span class="rate_price" id="ratePriceSecond">от 1.299 ₽</span>
-            <form action="#" method="post" id="secondRateForm" class  = "rate_form">
+            <form
+              action="#"
+              method="post"
+              id="secondRateForm"
+              class="rate_form"
+            >
               <input
                 type="button"
                 class="rate_button"
@@ -196,12 +199,20 @@
       <!-- Конец секции тарифов -->
       <section class="main_coupon">
         <div class="main_coupon-corner"></div>
-        <img src="./Sources/couponImage.png" alt="" class = "main_coupon-image"/>
+        <img
+          src="./Sources/Images/couponImage.png"
+          alt=""
+          class="main_coupon-image"
+        />
         <div class="main_coupon-info">
-          <span class="main_coupon-header">Снимай/покупай недвижимость выгоднее с купоном от БезРиелтора</span>
-          <span class="main_coupon-subheader">Найдите квартиру от собственника по лучшей цене:</span>
+          <span class="main_coupon-header"
+            >Снимай/покупай недвижимость выгоднее с купоном от БезРиелтора</span
+          >
+          <span class="main_coupon-subheader"
+            >Найдите квартиру от собственника по лучшей цене:</span
+          >
           <div class="main_coupon-activation">
-            <form action="#" method="post" class = "coupon-activation_form">
+            <form action="#" method="post" class="coupon-activation_form">
               <input
                 type="text"
                 name="activationCode"
@@ -222,15 +233,69 @@
         </div>
       </section>
       <section class="main_benefits">
-        <div class="benefits_header-block">
+        <div class="main_header-block">
           <span class="red-line"></span>
-          <span class="benefits_header"></span>
+          <span class="main_section-header"
+            >Преимущества сервиса БезРиелтора.ру</span
+          >
         </div>
         <div class="benefits_description-blocks">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="benefits_description-block first">
+            <div class="description-block_header-section">
+              <span class="header-section_header">Без посредников</span>
+              <img
+                src="./Sources/Icons/Men.svg"
+                alt=""
+                class="header-section_image"
+              />
+            </div>
+            <div class="description-block_main-section">
+              Мы проверяем каждое объявление, чтобы убедиться, что комиссии и
+              посредников нет.
+            </div>
+          </div>
+          <div class="benefits_description-block second">
+            <div class="description-block_header-section">
+              <span class="header-section_header">Без комиссии</span>
+              <img
+                src="./Sources/Icons/ZeroPercents.svg"
+                alt=""
+                class="header-section_image"
+              />
+            </div>
+            <div class="description-block_main-section">
+              Вы существенно экономите на комиссии риелтору
+            </div>
+          </div>
+          <div class="benefits_description-block third">
+            <div class="description-block_header-section">
+              <span class="header-section_header"
+                >Объявления только <br />от собственников</span
+              >
+              <img
+                src="./Sources/Icons/doneButton.svg"
+                alt=""
+                class="header-section_image"
+              />
+            </div>
+            <div class="description-block_main-section">
+              У нас размещаются объявления только от собственников
+            </div>
+          </div>
+          <div class="benefits_description-block fourth">
+            <div class="description-block_header-section">
+              <span class="header-section_header">Самая полная база</span>
+              <img
+                src="./Sources/Icons/fullBase.svg"
+                alt=""
+                class="header-section_image"
+              />
+            </div>
+            <div class="description-block_main-section">
+              Более 50.000 объявлений по аренде и продаже. Мы монитором все
+              агрегаторы и соцсети.
+            </div>
+          </div>
         </div>
       </section>
       <section class="main_faq"></section>
