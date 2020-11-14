@@ -20,7 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  padding: 51px 100px 114px 100px;
+  padding: 51px 150px 114px 150px;
 }
 /* Стили секции с тарифами */
 .main_rate {
@@ -202,7 +202,7 @@ select {
   outline: 0;
   box-shadow: none;
   border: 0 !important;
-  background: #F2F2F2;
+  background: #f2f2f2;
   background-image: none;
   border-radius: 12px;
 }
@@ -215,13 +215,12 @@ select::-ms-expand {
   z-index: 4;
   position: relative;
   display: flex;
-  width:60%;
+  width: 60%;
   height: 50px;
   line-height: 3;
-  background: #F2F2F2;
+  background: #f2f2f2;
   overflow: hidden;
   border-radius: 12px;
-  
 }
 select {
   flex: 1;
@@ -240,7 +239,7 @@ select {
   transform: rotate(45deg);
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  background: #F2F2F2;
+  background: #f2f2f2;
   cursor: pointer;
   pointer-events: none;
   -webkit-transition: 0.25s all ease;
@@ -288,7 +287,7 @@ select {
 
 .main_coupon-subheader {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
 }
 .coupon-activation_form {
@@ -311,33 +310,34 @@ select {
   margin-right: 20px;
   width: 50%;
   text-align: center;
+  font-size: 14px;
 }
 
 .coupon-activation_button {
   outline: none;
   border: none;
-  background-color: #E82431;
+  background-color: #e82431;
   color: #fff;
   border-radius: 8px;
   padding: 15px 10px;
   width: 50%;
-  font-size: 12px;
+  font-size: 14px;
   height: 100%;
 }
 
 /* Стили для уголка купона */
 .main_coupon-corner {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
-  border-right: #1C2443 50px solid ;
-  border-bottom: #1C2443 50px solid ;
-  border-top: #fff 50px solid  ;
-  border-left:  #fff 50px solid ;
+  border-right: #1c2443 50px solid;
+  border-bottom: #1c2443 50px solid;
+  border-top: #fff 50px solid;
+  border-left: #fff 50px solid;
 }
 
 /* Стили для секции Преимущества */
-.main_benefits  {
+.main_benefits {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
@@ -346,14 +346,14 @@ select {
 }
 
 .main_header-block {
-   display: flex;
-   align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .red-line {
   width: 50px;
   height: 5px;
-  background-color: #E82431;
+  background-color: #e82431;
   margin-right: 10px;
 }
 
@@ -370,7 +370,7 @@ select {
 
 .benefits_description-block {
   width: 25%;
-  background-color: #429EEB;
+  background-color: #429eeb;
   margin-right: 20px;
   border-radius: 8px;
   height: 120px;
@@ -378,13 +378,13 @@ select {
   padding: 10px;
 }
 .second {
-  background-color: #EFBD5A;
+  background-color: #efbd5a;
 }
 .third {
-  background-color: #5DC087;
+  background-color: #5dc087;
 }
 .fourth {
-  background-color: #C6505E;
+  background-color: #c6505e;
   margin-right: 0;
 }
 
@@ -397,9 +397,17 @@ select {
 
 .header-section_header {
   font-weight: bold;
+  font-size: 16px;
 }
 
 .description-block_main-section {
-  
-  font-size: 12px;
+  font-size: 13px;
+}
+.main_faq {
+  align-self: flex-start;
+  margin-top: 100px;
+}
+.main_qaa {
+  align-self: flex-start;
+  margin-top: 100px;
 }
