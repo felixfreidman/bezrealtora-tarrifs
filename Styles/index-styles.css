@@ -450,7 +450,7 @@ select {
   border-bottom: 2px solid #e82431;
 }
 
-.main_faq-checkbox:checked ~.question-block_header>.faq_question-arrow {
+.main_faq-checkbox:checked + .faq_question-block .faq_question-arrow {
   border-right: none;
   border-bottom: none;
   border-top: 2px solid #e82431;
@@ -458,7 +458,12 @@ select {
   transform: rotate(45deg);
 }
 
-.main_faq-checkbox:checked ~ .faq_answer-main {
+.main_faq-checkbox:checked +.faq_question-block {
+  background-color: #fff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main_faq-checkbox:checked + .faq_question-block> .faq_answer-main {
   display: block;
 }
 
