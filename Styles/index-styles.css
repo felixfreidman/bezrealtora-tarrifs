@@ -411,6 +411,13 @@ select {
   width: 100%;
 }
 
+.faq_main-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
 .faq_question-block {
   background-color: #f2f2f2;
   margin-bottom: 30px;
