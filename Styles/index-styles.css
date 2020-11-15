@@ -494,3 +494,18 @@ select {
   align-self: flex-start;
   margin-top: 100px;
 }
+
+.faq_link,.faq_link:hover,.faq_link:visited,.faq_link:active {
+  text-decoration: none;
+  color: #3369e8;
+}
+
+
+.main_prefooter {
+  margin-top: 100px;
+}
+
+.prefooter_span {
+  font-size: 18px;
+  line-height: 27px;
+}
