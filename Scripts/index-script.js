@@ -1,3 +1,4 @@
+const screenWidth = window.screen.width;
 let radioButton3Days = document.getElementById("3daysPeriod"),
   radioButton7Days = document.getElementById("7daysPeriod"),
   radioButton14Days = document.getElementById("14daysPeriod"),
@@ -37,5 +38,9 @@ selectCity.addEventListener("mouseout", () => {
       break;
   }
 });
+
+
+// SWIPE EVENT
+
 
 
