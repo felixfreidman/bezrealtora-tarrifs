@@ -259,6 +259,6 @@ for (var example in examples) {
 
 
 
-if(screenWidth > 320 && screenWidth < 720) {
+if(screenWidth < 720) {
   secondCard.classList.add("hide");
 }
