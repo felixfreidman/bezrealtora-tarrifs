@@ -232,28 +232,21 @@ var swipe = function(el, settings) {
 
 
 
-firstCard.addEventListener("swipe", ()=> {
- 
-});
-
-secondCard.addEventListener("swipe", ()=> {
-
-});
 
 var examples = {
     simpleLeft: {
         el: firstCard,
         callback: function() {
           firstCard.classList.toggle("hide");
-          secondCard.classList.toggle("second-card");
+          secondCard.classList.toggle("hide");
           console.log("Work!");
         }
     },
     simpleRight: {
         el: secondCard,
         callback: function() {
-          secondCard.classList.toggle("second-card");
-          firstCard.classList.toggle("hide");
+          secondCard.classList.add("hide");
+          firstCard.classList.remove("hide");
         }
     }
 };
@@ -266,4 +259,6 @@ for (var example in examples) {
 
 
 
-
+if(screenWidth > 320 && screenWidth < 720) {
+  secondCard.classList.add("hide");
+}
