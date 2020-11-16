@@ -189,6 +189,7 @@ input:checked + label {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 .rate_button:active {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
@@ -323,6 +324,7 @@ select {
   width: 50%;
   font-size: 14px;
   height: 100%;
+  -webkit-appearance: none;
 }
 
 /* Стили для уголка купона */
@@ -706,7 +708,7 @@ select {
  }
 
 
- @media screen and (min-width: 320px) and (max-width: 719px) {
+ @media screen and (min-width: 414px) and (max-width: 719px) {
   .main {
     padding: 51px 0px 114px 0px;
   }
@@ -716,6 +718,9 @@ select {
   }
   .first-card {
     margin-right: 0px;
+  }
+  .unordered-list_list-item {
+    font-size: 16px;
   }
   .main_rate-card {
     display: flex;
@@ -774,6 +779,231 @@ select {
   font-size: 14px;
   line-height: 18px;
 }
+ }
+ @media screen and (min-width: 375px) and (max-width: 413px) {
+  .main {
+    padding: 51px 0px 114px 0px;
+  }
+  .main_header {
+    font-size:26px;
+    margin-bottom: 180px;
+  }
+  .main_rate-image {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 80px;
+    z-index: 10;
+    margin-bottom: -20%;
+  }
+  .first-card {
+    margin-right: 0px;
+  }
+  .unordered-list_list-item {
+    font-size: 16px;
+  }
+  .main_rate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 0px 2% 50px 2%;
+    background: #ffffff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .main_coupon-image {
+    display: none;
+  }
+  .main_coupon-corner {
+    display: none;
+  }
+  .main_coupon {
+    height:200px;
+    padding: 20px;
+  }
+  .main_coupon-info {
+    margin-left: 0px;
+  }
+  .main_coupon-header {
+    font-size: 20px;
+  }
+  .coupon-activation_input {
+    width: 40%;
+    font-size: 14px;
+  }
+  
+  .coupon-activation_button {
+    width: 50%;
+    font-size: 14px;
+  }
+  .main_section-header {
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+  }
+  .benefits_description-blocks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .benefits_description-block {
+    width: 95%;
+    margin-bottom: 20px;
+    height: 130px;
+    color: #fff;
+    padding: 10px;
+  }
+  .header-section_header {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .description-block_main-section {
+    font-size: 16px;
+  }
+  .faq_question-block {
+    width: 90%;
+  }
+  .main_prefooter {
+    margin-top: 50px;
+  }
+.prefooter_span {
+  font-size: 14px;
+  line-height: 18px;
+}
+ }
+ @media screen and (min-width: 320px) and (max-width: 374px) {
+  .main {
+    padding: 51px 0px 114px 0px;
+  }
+  .main_header {
+    font-size:20px;
+    margin-bottom: 100px;
+  }
+  .rate_header {
+    font-size: 18px;
+  }
+  .rate-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .main_rate-image {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 80px;
+    z-index: 10;
+    margin-bottom: -20%;
+  }
+  .first-card {
+    margin-right: 0px;
+  }
+  .unordered-list_list-item {
+    font-size: 14px;
+  }
+  .main_rate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 0px 2% 50px 2%;
+    background: #ffffff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .rate_price {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  .rate_button {
+    width: 90%;
+    background-color: #5dc087;
+    color: white;
+    height: 58px;
+    font-size: 16px;
+    box-shadow: none;
+    font-family: "Roboto";
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  .main_coupon-image {
+    display: none;
+  }
+  .main_coupon-corner {
+    display: none;
+  }
+  .main_coupon {
+    height:210px;
+    padding: 10px;
+    width: 98%;
+  }
+  .main_coupon-info {
+    margin-left: 0px;
+  }
+  .main_coupon-header {
+    font-size: 20px;
+  }
+  .coupon-activation_input {
+    width: 45%;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .coupon-activation_button {
+    width: 45%;
+    font-size: 12px;
+  }
+  .main_section-header {
+    font-size: 22px;
+  }
+  .benefits_description-blocks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .benefits_description-block {
+    width: 90%;
+    margin-bottom: 20px;
+    height: 130px;
+    color: #fff;
+    padding: 10px;
+  }
+  .header-section_header {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .description-block_main-section {
+    font-size: 16px;
+  }
+  .faq_question-block {
+    width: 90%;
+  }
+  .main_prefooter {
+    margin-top: 50px;
+  }
+.prefooter_span {
+  font-size: 14px;
+  line-height: 18px;
+}
+.faq_answer-main {
+  font-size: 14px;
+  line-height: 16px;
+}
+.faq_question-block {
+  width: 85%;
+}
+
+.faq_question-header {
+  width: 80%;
+  font-size: 14px;
+}
+
  }
 
 

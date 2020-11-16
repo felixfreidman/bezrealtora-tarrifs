@@ -40,7 +40,7 @@ selectCity.addEventListener("mouseout", () => {
 });
 
 let firstCard = document.getElementById("firstCard");
-let secondCard  = document.getElementById('firstCard');
+let secondCard  = document.getElementById('secondCard');
 
 
 
