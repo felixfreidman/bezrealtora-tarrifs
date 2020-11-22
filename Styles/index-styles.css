@@ -257,6 +257,30 @@ select {
   transform: rotate(45deg);
 }
 
+/* Стили для кнопок переключения тарифов */
+.main_rate-toggle {
+  margin-top: 30px;
+  display: flex;
+
+}
+
+.rate-toggle_first-toggle {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.rate-toggle_second-toggle {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.rate-toogle_toggle-checked {
+  background-color: #ccc;
+}
 /*Стили для купона */
 
 .main_coupon {

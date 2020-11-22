@@ -6,7 +6,10 @@ let radioButton3Days = document.getElementById("3daysPeriod"),
   secondRateButton = document.getElementById("secondRateButton"),
   rateFirstPrice = document.getElementById("ratePriceFirst"),
   rateSecondPrice = document.getElementById("ratePriceSecond"),
-  selectCity = document.getElementById("rateChosenCity");
+  selectCity = document.getElementById("rateChosenCity"),
+  rateSwitchSection = document.querySelector(".main_rate-toggle"),
+  firstRateSwitch = document.querySelector(".rate-toggle_first-toggle"),
+  secondRateSwitch = document.querySelector(".rate-toggle_second-toggle");
 
 radioButton3Days.addEventListener("click", () => {
   rateFirstPrice.textContent = "199 ₽";
@@ -239,7 +242,8 @@ var examples = {
         callback: function() {
           firstCard.classList.toggle("hide");
           secondCard.classList.toggle("hide");
-          console.log("Work!");
+          firstRateSwitch.classList.toggle("rate-toogle_toggle-checked ");
+          secondRateSwitch.classList.toggle("rate-toogle_toggle-checked ");
         }
     },
     simpleRight: {
@@ -247,6 +251,8 @@ var examples = {
         callback: function() {
           secondCard.classList.add("hide");
           firstCard.classList.remove("hide");
+          firstRateSwitch.classList.toggle("rate-toogle_toggle-checked ");
+          secondRateSwitch.classList.toggle("rate-toogle_toggle-checked ");
         }
     }
 };
@@ -261,4 +267,9 @@ for (var example in examples) {
 
 if(screenWidth < 720) {
   secondCard.classList.add("hide");
+  rateSwitchSection.classList.remove("hide");
 }
+
+if(screenWidth >= 720) {
+    rateSwitchSection.classList.add("hide");
+} 
