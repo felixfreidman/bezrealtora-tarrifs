@@ -242,8 +242,8 @@ var examples = {
         callback: function() {
           firstCard.classList.toggle("hide");
           secondCard.classList.toggle("hide");
-          firstRateSwitch.classList.toggle("rate-toogle_toggle-checked ");
-          secondRateSwitch.classList.toggle("rate-toogle_toggle-checked ");
+          firstRateSwitch.classList.toggle("rate-toogle_toggle-checked");
+          secondRateSwitch.classList.toggle("rate-toogle_toggle-checked");
         }
     },
     simpleRight: {
@@ -251,8 +251,8 @@ var examples = {
         callback: function() {
           secondCard.classList.add("hide");
           firstCard.classList.remove("hide");
-          firstRateSwitch.classList.toggle("rate-toogle_toggle-checked ");
-          secondRateSwitch.classList.toggle("rate-toogle_toggle-checked ");
+          firstRateSwitch.classList.toggle("rate-toogle_toggle-checked");
+          secondRateSwitch.classList.toggle("rate-toogle_toggle-checked");
         }
     }
 };
@@ -273,3 +273,5 @@ if(screenWidth < 720) {
 if(screenWidth >= 720) {
     rateSwitchSection.classList.add("hide");
 } 
+
+
