@@ -2,19 +2,21 @@
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
-  src: url("../Fonts/Roboto-Regular.ttf");
+  src: url("../..//Fonts/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
-  src: url("../Fonts/Roboto-Bold.ttf");
+  src: url("../../Fonts/Roboto-Bold.ttf");
 }
 body {
   font-family: "Roboto";
 }
 /* Версия по умолчанию, на экраны 1376х1176 */
 /* Стили самой страницы */
-.main {
+/* Версия по умолчанию, на экраны 1376х1176 */
+/* Стили самой страницы */
+.main_tarifs {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,11 +37,26 @@ body {
   font-size: 30px;
   margin-bottom: 180px;
 }
+.main_rate.hiddenBlockSubscribe,
+.main_coupon.hiddenBlockSubscribe {
+  display: none !important;
+}
 /* Стили секции с карточками */
 .main_rate-section {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+form.subscribe_form {
+  width: 100%;
+  text-align: center;
+}
+form.selecter_form {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 /* Стили для каждой карты */
 .main_rate-card {
@@ -52,6 +69,22 @@ body {
   background: #ffffff;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+}
+p.main_coupon_info.coupon_error {
+  font-size: 0.7em;
+  margin-top: 0.3em;
+  color: #e82431;
+  width: 48%;
+  text-align: center;
+  font-weight: bold;
+}
+p.main_coupon_info.coupon_success {
+  font-size: 0.7em;
+  margin-top: 0.3em;
+  color: #5dc087;
+  width: 48%;
+  text-align: center;
+  font-weight: bold;
 }
 /* Картинка в оглавлении */
 .main_rate-image {
@@ -88,7 +121,7 @@ ul {
 .unordered-list_list-item {
   margin: 0;
   padding: 0;
-  background: url("../Sources/Icons/list_item.svg") no-repeat 0 -3px;
+  background: url("../img/tarif/list_item.svg") no-repeat 0 -3px;
   padding-left: 30px;
   min-height: 30px;
   font-size: 20px;
@@ -137,7 +170,7 @@ ul {
 }
 
 .table-body-selling-badge {
-  background: url("../Sources/Images/badgeBackground.png") no-repeat;
+  background: url("../img/tarif/badgeBackground.png") no-repeat;
   font-size: 10px;
   height: 100%;
   display: flex;
@@ -168,6 +201,7 @@ input:checked + label {
 .rate_price {
   margin-top: 50px;
   font-size: 40px;
+  display: block;
 }
 /* Стили для формы в которой содержится кнопка */
 .rate_form {
@@ -261,7 +295,6 @@ select {
 .main_rate-toggle {
   margin-top: 30px;
   display: flex;
-
 }
 
 .rate-toggle_first-toggle {
@@ -292,6 +325,7 @@ select {
   height: 250px;
   padding: 30px;
   border-radius: 8px;
+  box-sizing: content-box;
 }
 
 .main_coupon-image {
@@ -360,6 +394,7 @@ select {
   border-bottom: #1c2443 50px solid;
   border-top: #fff 50px solid;
   border-left: #fff 50px solid;
+  z-index: 10;
 }
 
 /* Стили для секции Преимущества */
@@ -399,7 +434,7 @@ select {
   background-color: #429eeb;
   margin-right: 20px;
   border-radius: 8px;
-  height: 120px;
+  height: 150px;
   color: #fff;
   padding: 10px;
 }
@@ -539,70 +574,8 @@ select {
   line-height: 27px;
 }
 
-@media screen and (min-width: 1900px) {
-  .main_header {
-    font-size: 40px;
-  }
-  .main_rate-image {
-    width: 300px;
-    height: 300px;
-    bottom: 150px;
-    margin-bottom: -15%;
-  }
-  .rate_header {
-    font-size: 36px;
-  }
-  .rate-description {
-    font-size: 18px;
-  }
-  .unordered-list_list-item {
-    font-size: 22px;
-  }
-  .first-rate_table-header {
-    font-size: 26px;
-  }
-  .table-body-selling-badge {
-    font-size: 16px;
-    width: 40%;
-  }
-
-  .table-body_table-row label {
-    font-size: 22px;
-  }
-
-  .main_coupon {
-    min-height: 350px;
-    height: fit-content;
-  }
-  .main_coupon-header {
-    margin-top: 8%;
-    font-size: 40px;
-  }
-  .main_coupon-subheader {
-    margin-top: 20px;
-    font-size: 22px;
-  }
-
-  .coupon-activation_form {
-    margin-top: 50px;
-  }
-  .benefits_description-block {
-    min-height: 180px;
-  }
-  .description-block_header-section {
-    margin-bottom: 30px;
-  }
-  .header-section_header {
-    font-size: 20px;
-  }
-
-  .description-block_main-section {
-    font-size: 18px;
-  }
-}
-
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .main {
+  .main_tarifs {
     padding: 51px 80px 114px 80px;
   }
   .main_rate-image {
@@ -641,19 +614,8 @@ select {
     font-size: 10px;
   }
 }
-
-@media (min-width: 1201px) and (max-width: 1440px) {
-  .main_rate-image {
-    width: 250px;
-    height: 250px;
-    position: relative;
-    bottom: 130px;
-    z-index: 10;
-    margin-bottom: -20%;
-  }
-}
- @media screen and (min-width: 720px) and (max-width: 1023px) {
-  .main {
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .main_tarifs {
     padding: 51px 0px 114px 0px;
   }
   .main_rate-image {
@@ -681,9 +643,9 @@ select {
     font-size: 9px;
   }
   .main_coupon {
-    max-height: 200px;
+    max-height: 250px;
     height: fit-content;
-    padding: 20px;;
+    padding: 20px;
   }
   .main_coupon-header {
     font-size: 24px;
@@ -719,9 +681,9 @@ select {
     margin-right: 0px;
   }
 
-.description-block_header-section {
-  margin-bottom: 5px;
-}
+  .description-block_header-section {
+    margin-bottom: 5px;
+  }
   .header-section_header {
     font-size: 12px;
   }
@@ -740,16 +702,18 @@ select {
     font-size: 14px;
     line-height: 20px;
   }
- }
+}
 
-
- @media screen and (min-width: 414px) and (max-width: 719px) {
-  .main {
+@media screen and (min-width: 414px) and (max-width: 719px) {
+  .main_rate-section {
+    flex-flow: column;
+  }
+  .main_tarifs {
     padding: 51px 0px 114px 0px;
   }
   .main_header {
-    font-size:30px;
-    margin-bottom: 180px;
+    font-size: 30px;
+    margin-bottom: 40px;
   }
   .first-card {
     margin-right: 0px;
@@ -767,6 +731,7 @@ select {
     background: #ffffff;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-bottom: 40px;
   }
   .main_coupon-image {
     display: none;
@@ -775,8 +740,12 @@ select {
     display: none;
   }
   .main_coupon {
-    height:180px;
+    height: auto;
     padding: 20px;
+  }
+  p.main_coupon_info.coupon_error,
+  p.main_coupon_info.coupon_success {
+    width: 100%;
   }
   .main_coupon-info {
     margin-left: 0px;
@@ -790,9 +759,9 @@ select {
     margin-top: 40px;
   }
   .benefits_description-block {
-    width: 95%;
+    width: 100%;
     margin-bottom: 20px;
-    height: 120px;
+    height: auto;
     color: #fff;
     padding: 10px;
   }
@@ -805,31 +774,35 @@ select {
     font-size: 16px;
   }
   .faq_question-block {
-    width: 90%;
+    width: 100%;
   }
   .main_prefooter {
     margin-top: 50px;
   }
-.prefooter_span {
-  font-size: 14px;
-  line-height: 18px;
+  .prefooter_span {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
- }
- @media screen and (min-width: 375px) and (max-width: 413px) {
-  .main {
+@media screen and (min-width: 375px) and (max-width: 413px) {
+  .main_rate-section {
+    flex-flow: column;
+  }
+  .main_tarifs {
     padding: 51px 0px 114px 0px;
   }
   .main_header {
-    font-size:26px;
-    margin-bottom: 180px;
+    font-size: 26px;
+    margin-bottom: 40px;
   }
   .main_rate-image {
     width: 150px;
     height: 150px;
     position: relative;
-    bottom: 80px;
+    bottom: 0;
     z-index: 10;
-    margin-bottom: -20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .first-card {
     margin-right: 0px;
@@ -847,6 +820,7 @@ select {
     background: #ffffff;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-bottom: 40px;
   }
   .main_coupon-image {
     display: none;
@@ -855,8 +829,12 @@ select {
     display: none;
   }
   .main_coupon {
-    height:200px;
+    height: auto;
     padding: 20px;
+  }
+  p.main_coupon_info.coupon_error,
+  p.main_coupon_info.coupon_success {
+    width: 100%;
   }
   .main_coupon-info {
     margin-left: 0px;
@@ -868,7 +846,7 @@ select {
     width: 40%;
     font-size: 14px;
   }
-  
+
   .coupon-activation_button {
     width: 50%;
     font-size: 14px;
@@ -884,9 +862,9 @@ select {
     margin-top: 40px;
   }
   .benefits_description-block {
-    width: 95%;
+    width: 100%;
     margin-bottom: 20px;
-    height: 130px;
+    height: auto;
     color: #fff;
     padding: 10px;
   }
@@ -899,23 +877,26 @@ select {
     font-size: 16px;
   }
   .faq_question-block {
-    width: 90%;
+    width: 100%;
   }
   .main_prefooter {
     margin-top: 50px;
   }
-.prefooter_span {
-  font-size: 14px;
-  line-height: 18px;
+  .prefooter_span {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
- }
- @media screen and (min-width: 320px) and (max-width: 374px) {
-  .main {
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .main_rate-section {
+    flex-flow: column;
+  }
+  .main_tarifs {
     padding: 51px 0px 114px 0px;
   }
   .main_header {
-    font-size:20px;
-    margin-bottom: 100px;
+    font-size: 20px;
+    margin-bottom: 30px;
   }
   .rate_header {
     font-size: 18px;
@@ -928,9 +909,10 @@ select {
     width: 150px;
     height: 150px;
     position: relative;
-    bottom: 80px;
+    bottom: 0;
     z-index: 10;
-    margin-bottom: -20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .first-card {
     margin-right: 0px;
@@ -948,6 +930,7 @@ select {
     background: #ffffff;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-bottom: 40px;
   }
   .rate_price {
     margin-top: 30px;
@@ -973,9 +956,13 @@ select {
     display: none;
   }
   .main_coupon {
-    height:210px;
+    height: auto;
     padding: 10px;
     width: 98%;
+  }
+  p.main_coupon_info.coupon_error,
+  p.main_coupon_info.coupon_success {
+    width: 100%;
   }
   .main_coupon-info {
     margin-left: 0px;
@@ -988,7 +975,7 @@ select {
     font-size: 14px;
     margin-right: 10px;
   }
-  
+
   .coupon-activation_button {
     width: 45%;
     font-size: 12px;
@@ -1002,9 +989,9 @@ select {
     margin-top: 40px;
   }
   .benefits_description-block {
-    width: 90%;
+    width: 100%;
     margin-bottom: 20px;
-    height: 130px;
+    height: auto;
     color: #fff;
     padding: 10px;
   }
@@ -1017,33 +1004,25 @@ select {
     font-size: 16px;
   }
   .faq_question-block {
-    width: 90%;
+    width: 100%;
   }
   .main_prefooter {
     margin-top: 50px;
   }
-.prefooter_span {
-  font-size: 14px;
-  line-height: 18px;
+  .prefooter_span {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .faq_answer-main {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .faq_question-block {
+    width: 100%;
+  }
+
+  .faq_question-header {
+    width: 80%;
+    font-size: 14px;
+  }
 }
-.faq_answer-main {
-  font-size: 14px;
-  line-height: 16px;
-}
-.faq_question-block {
-  width: 85%;
-}
-
-.faq_question-header {
-  width: 80%;
-  font-size: 14px;
-}
-
- }
-
-
- /* JS стили */
-
- .hide {
-   display: none;
- }

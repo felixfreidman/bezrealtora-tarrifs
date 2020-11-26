@@ -3,814 +3,935 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Styles/index-styles.css" />
-    <title>Bezrealtora</title>
+    <link rel="stylesheet" href="./app/css/tarif.css" />
+    <title>Document</title>
   </head>
   <body>
-    <!-- Словарь:
-        rate - тариф
-        coupon - купон
-        benefits - преимущества
-        faq - frquently asked questions
-        qaa - questions and answers
-     -->
-    <!-- HEADER block -->
-
-    <div class="main">
-      <section class="main_rate">
-        <!-- Поделил секцию тарифов на 2 части, оглавление и само описание -->
-        <span class="main_header">Выберете удобный тариф</span>
-        <div class="main_rate-section">
-          <!-- Первая карточка, class First отвечает за внешний отступ справа -->
-          <div class="main_rate-card first-card" id="firstCard">
-            <img
-              src="./Sources/Images/first-rate.svg"
-              alt=":("
-              class="main_rate-image"
-            />
-            <span class="rate_header">Доступ к базе собственников</span>
-            <span class="rate-description">
-              Тариф подойдет Вам, если Вы хотите найти квартиру или другой
-              объект от собственника самостоятельно в самой большой и актуальной
-              базе недвижимости.
-            </span>
-            <ul class="rate_unordered-list">
-              <li class="unordered-list_list-item">
-                Доступ к объявлениям от собственников без ограничений
-              </li>
-              <li class="unordered-list_list-item">
-                Блокируем мошенников и агентов со скрытой коммисией
-              </li>
-              <li class="unordered-list_list-item">
-                Проверка собственника по Росреестру
-              </li>
-              <li class="unordered-list_list-item">
-                Договор аренды и другие документы для сделки
-              </li>
-            </ul>
-            <span class="first-rate_table-header"
-              >Выберете период доступа к базе собственников</span
-            >
-            <!-- Ячейки таблицы - это радиокнопки, нужны для скриптов. Значение будет передаваться в кнопку -->
-            <div class="first-rate_table-body">
-              <div class="table-body_table-row">
-                <input
-                  type="radio"
-                  name="accessPeriod"
-                  id="3daysPeriod"
-                  class="period-checkbox"
-                />
-                <label for="3daysPeriod">
-                  <div class="table-row_table-data">3 дня</div>
-                </label>
-                <input
-                  type="radio"
-                  name="accessPeriod"
-                  id="14daysPeriod"
-                  class="period-checkbox"
-                  checked
-                />
-                <label for="14daysPeriod">
-                  <div class="table-row_table-data special-cell">
-                    14 дней
-                    <div class="table-body-selling-badge">
-                      <span class="selling-badge_span"
-                        >Выбор 71%<br />пользователей</span
+    <div class="main page_object">
+      <div class="content">
+        <div class="section_content">
+          <div class="wrap">
+            <div class="content">
+              <div class="header_tarifs"></div>
+              <div class="main_tarifs">
+                <section class="main_rate">
+                  <!-- Поделил секцию тарифов на 2 части, оглавление и само описание -->
+                  <span class="main_header">Выберите удобный тариф</span>
+                  <div class="main_rate-section">
+                    <!-- Первая карточка, class First отвечает за внешний отступ справа -->
+                    <div class="main_rate-card first-card" id="firstCard">
+                      <img
+                        src="./app/img/tarif/first-rate.svg"
+                        alt=":("
+                        class="main_rate-image"
+                      />
+                      <span class="rate_header"
+                        >Доступ к базе собственников</span
                       >
+                      <span class="rate-description">
+                        Тариф подойдет Вам, если Вы хотите найти квартиру или
+                        другой объект от собственника самостоятельно в самой
+                        большой и актуальной базе недвижимости.
+                      </span>
+                      <ul class="rate_unordered-list">
+                        <li class="unordered-list_list-item">
+                          Доступ к объявлениям от собственников без ограничений
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Блокируем мошенников и агентов со скрытой комиссией
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Проверка собственника по Росреестру
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Договор аренды и другие документы для сделки
+                        </li>
+                      </ul>
+                      <span class="first-rate_table-header"
+                        >Выберите период доступа к базе собственников</span
+                      >
+                      <!-- Ячейки таблицы - это радиокнопки, нужны для скриптов. Значение будет передаваться в кнопку -->
+                      <form action="#" method="post" class="subscribe_form">
+                        <div class="first-rate_table-body">
+                          <div class="table-body_table-row">
+                            <div style="display: none">
+                              <input name="type" value="subscribe" />
+                              <input name="promocode" value="" />
+                              <input name="discount" value="" />
+                              <input name="promocodeid" value="" />
+                              <input name="userid" value="" />
+                            </div>
+                            <input
+                              type="radio"
+                              name="accessPeriod"
+                              id="3daysPeriod"
+                              class="period-checkbox"
+                              value="1"
+                              data-price="199"
+                            />
+                            <label for="3daysPeriod">
+                              <div class="table-row_table-data">3 дня</div>
+                            </label>
+                            <input
+                              type="radio"
+                              name="accessPeriod"
+                              id="14daysPeriod"
+                              class="period-checkbox"
+                              value="3"
+                              checked="checked"
+                              data-price="599"
+                            />
+                            <label for="14daysPeriod">
+                              <div class="table-row_table-data special-cell">
+                                14 дней
+                                <div class="table-body-selling-badge">
+                                  <span class="selling-badge_span"
+                                    >Выбор 71%<br />пользователей</span
+                                  >
+                                </div>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="table-body_table-row">
+                            <input
+                              type="radio"
+                              name="accessPeriod"
+                              id="7daysPeriod"
+                              class="period-checkbox"
+                              value="2"
+                              data-price="399"
+                            />
+                            <label for="7daysPeriod">
+                              <div class="table-row_table-data">7 дней</div>
+                            </label>
+                            <input
+                              type="radio"
+                              name="accessPeriod"
+                              id="30daysPeriod"
+                              class="period-checkbox"
+                              value="4"
+                              data-price="899"
+                            />
+                            <label for="30daysPeriod">
+                              <div class="table-row_table-data">30 дней</div>
+                            </label>
+                          </div>
+                        </div>
+                        <!-- Конец таблицы -->
+                        <span id="ratePriceFirst" class="rate_price"
+                          ><span class="rate_price_one" data-price="599"
+                            >599</span
+                          >
+                          ₽</span
+                        >
+                        <div class="rate_form">
+                          <button
+                            class="rate_button window_open"
+                            data-type="auth"
+                            name="firstRateButton"
+                          >
+                            Подключить тариф
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- Конец первой карточки -->
+                    <!-- Вторая карточка тарифов -->
+                    <div class="main_rate-card" id="secondCard">
+                      <img
+                        src="./app/img/tarif/second-rate.svg"
+                        alt=":("
+                        class="main_rate-image"
+                      />
+                      <span class="rate_header"
+                        >Индивидуальный подбор недвижимости от
+                        собственника</span
+                      >
+                      <span class="rate-description">
+                        Тариф подойдет Вам, если Вы хотите, чтобы мы помогли Вам
+                        с поиском недвижимости от собственника. Мы возьмем
+                        поиск, подбор и проверку собственности на себя.
+                      </span>
+                      <ul class="rate_unordered-list">
+                        <li class="unordered-list_list-item">
+                          Доступ к объявлениям от собственников без ограничений
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Блокируем мошенников и агентов со скрытой комиссией
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Проверка собственника по Росреестру
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Договор аренды и другие документы для сделки
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Выделенный личный помощник (полностью займется поиском
+                          для Вас)
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Поиск квартиры по всем источникам
+                        </li>
+                        <li class="unordered-list_list-item">
+                          Ежедневная подборка, проверка и обзвон квартир по
+                          Вашим параметрам
+                        </li>
+                      </ul>
+                      <form
+                        action="#"
+                        method="post"
+                        class="selecter_form"
+                        id="secondRateForm"
+                      >
+                        <div style="display: none">
+                          <input name="type" value="selected" />
+                          <input name="promocode" value="" />
+                          <input name="discount" value="" />
+                          <input name="promocodeid" value="" />
+                          <input name="userid" value="" />
+                        </div>
+                        <div class="rate_select">
+                          <select
+                            id="rateChosenCity"
+                            name="accessSelected"
+                            form="secondRateForm"
+                            required
+                          >
+                            <option
+                              value="0"
+                              selected
+                              disabled
+                              data-price="от 1299"
+                            >
+                              Выберите город
+                            </option>
+                            <option value="1" data-price="2399">Москва</option>
+                            <option value="2" data-price="1699">
+                              Санкт-Петербург
+                            </option>
+                            <option value="3" data-price="1699">Казань</option>
+                            <option value="4" data-price="1699">
+                              Екатеринбург
+                            </option>
+                            <option value="5" data-price="1399">
+                              Новосибирск
+                            </option>
+                            <option value="6" data-price="1699">Самара</option>
+                            <option value="7" data-price="1699">
+                              Нижний Новгород
+                            </option>
+                            <option value="8" data-price="1699">
+                              Челябинск
+                            </option>
+                            <option value="9" data-price="1399">Омск</option>
+                            <option value="10" data-price="1299">
+                              Иркутск
+                            </option>
+                            <option value="11" data-price="1299">Сочи</option>
+                            <option value="12" data-price="1299">
+                              Улан-Удэ
+                            </option>
+                            <option value="13" data-price="1699">
+                              Ростов-на-Дону
+                            </option>
+                            <option value="14" data-price="1399">
+                              Воронеж
+                            </option>
+                            <option value="15" data-price="1399">
+                              Волгоград
+                            </option>
+                            <option value="16" data-price="1399">Томск</option>
+                            <option value="17" data-price="1399">Пермь</option>
+                            <option value="18" data-price="1399">
+                              Саратов
+                            </option>
+                          </select>
+                        </div>
+                        <span class="rate_price" id="ratePriceSecond"
+                          ><span class="rate_price_second" data-price="1299"
+                            >от 1299</span
+                          >
+                          ₽</span
+                        >
+                        <div id="secondRateForm" class="rate_form">
+                          <button
+                            class="rate_button window_open"
+                            data-type="auth"
+                            name="firstRateButton"
+                          >
+                            Подключить тариф
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- Конец второй карточки -->
+                  </div>
+                </section>
+                <!-- Конец секции тарифов -->
+                <section class="main_coupon">
+                  <div class="main_coupon-corner"></div>
+                  <img
+                    src="./app/img/tarif/couponImage.png"
+                    alt=""
+                    class="main_coupon-image"
+                  />
+                  <div class="main_coupon-info">
+                    <span class="main_coupon-header"
+                      >Снимай/покупай недвижимость выгоднее с купоном от
+                      БезРиелтора</span
+                    >
+                    <span class="main_coupon-subheader"
+                      >Найдите квартиру от собственника по лучшей цене:</span
+                    >
+                    <div class="main_coupon-activation">
+                      <form
+                        action="#"
+                        method="post"
+                        class="coupon-activation_form"
+                      >
+                        <input
+                          type="text"
+                          name="promocode"
+                          id="activationCode"
+                          value=""
+                          class="coupon-activation_input"
+                          placeholder="Введите код"
+                        />
+                        <button
+                          name="submitCode"
+                          id="submitCode"
+                          class="coupon-activation_button"
+                        >
+                          Активировать купон
+                        </button>
+                      </form>
+                      <p class="main_coupon_info"></p>
                     </div>
                   </div>
-                </label>
+                </section>
+                <!-- Конец секции купона -->
+
+                <section class="main_benefits">
+                  <div class="main_header-block">
+                    <span class="red-line"></span>
+                    <span class="main_section-header"
+                      >Преимущества сервиса БезРиелтора.ру</span
+                    >
+                  </div>
+                  <div class="benefits_description-blocks">
+                    <div class="benefits_description-block first">
+                      <div class="description-block_header-section">
+                        <span class="header-section_header"
+                          >Без посредников</span
+                        >
+                        <img
+                          src="./app/img/tarif/Men.svg"
+                          alt=""
+                          class="header-section_image"
+                        />
+                      </div>
+                      <div class="description-block_main-section">
+                        Мы проверяем каждое объявление, чтобы убедиться, что
+                        комиссии и посредников нет.
+                      </div>
+                    </div>
+                    <div class="benefits_description-block second">
+                      <div class="description-block_header-section">
+                        <span class="header-section_header">Без комиссии</span>
+                        <img
+                          src="./app/img/tarif/ZeroPercents.svg"
+                          alt=""
+                          class="header-section_image"
+                        />
+                      </div>
+                      <div class="description-block_main-section">
+                        Вы существенно экономите на комиссии риелтору
+                      </div>
+                    </div>
+                    <div class="benefits_description-block third">
+                      <div class="description-block_header-section">
+                        <span class="header-section_header"
+                          >Объявления только <br />от собственников</span
+                        >
+                        <img
+                          src="./app/img/tarif/doneButton.svg"
+                          alt=""
+                          class="header-section_image"
+                        />
+                      </div>
+                      <div class="description-block_main-section">
+                        У нас размещаются объявления только от собственников
+                      </div>
+                    </div>
+                    <div class="benefits_description-block fourth">
+                      <div class="description-block_header-section">
+                        <span class="header-section_header"
+                          >Самая полная база</span
+                        >
+                        <img
+                          src="./app/img/tarif/fullBase.svg"
+                          alt=""
+                          class="header-section_image"
+                        />
+                      </div>
+                      <div class="description-block_main-section">
+                        Более 50.000 объявлений по аренде и продаже. Мы
+                        монитором все агрегаторы и соцсети.
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Конец секции премуществ -->
+
+                <section class="main_faq">
+                  <div class="main_header-block">
+                    <span class="red-line"></span>
+                    <span class="main_section-header"
+                      >Часто задаваемые вопросы</span
+                    >
+                  </div>
+                  <div class="faq_main-body">
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion1"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion1" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Что такое БезРиелтора?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Это сервис по аренде и покупке недвижимости от
+                        собственников. У нас Вы можете снять, купить или
+                        подобрать квартиру/комнату или любой другой объект
+                        недвижимости. Если Вы собственник, то сдать или продать
+                        Вы можете бесплатно. Также мы разместим Ваше объявления
+                        в наших группах.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >В каких городах Вы работаете?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Объявления на сайте представлены в 14 городах России:
+                        <br />
+                        в Москве, Санкт-Петербурге, Екатеринбурге, Казани,
+                        Новосибирске, Челябинске, Омске, Иркутске, Сочи,
+                        Саратове, Перми, Воронеже, Волгограде, Нижнем Новгороде,
+                        Ростове-на-Дону, Томске, Улан-Удэ. А также снять в
+                        аренду или купить квартиру можно в Подмосковных городах
+                        - в Красногорске, Люберцах, Мытищах, Химках, Реутове,
+                        Королёве, Балашихе, Долгопрудном, Подольске, Лобне,
+                        Зеленограде и других.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion3"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion3" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Откуда Вы берёте объявления?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Объявления по аренде и продаже попадают на сайт
+                        несколькими путями:<br />
+                        Собственники самостоятельно загружают объявления о сдаче
+                        или продаже недвижимости, после чего оно тщательно
+                        проверяется модератором. Мы прозваниваем объявление и
+                        проверяем всю информацию. При необходимости заказываем
+                        выписку из ЕГРН. Если всё в порядке и соответствует
+                        действительности, то объявление появляется на сайте.
+                        Также квартиры/комнаты и другие объекты нам присылают в
+                        VK, Инстаграм и Телеграм, эти объекты тоже тщательно
+                        проверяется и если всё ок, то выгружается на сайт. ⁃ Наш
+                        специальный робот собирает все объявления по всем базам
+                        аренды и продаже жилья от собственников и выгружает их
+                        автоматически на сайт. В процессе объявление сначала
+                        проверяется роботом - сравниваются номера телефонов,
+                        фотографии и текст. После выгрузки, в порядке
+                        очередности объявление проверяется ещё раз
+                        модератором.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion4"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion4" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Как вы проверяете квартиры?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Сначала мы проверяем телефон по внутренней базе
+                        телефонов риелторов. Если его нет, мы звоним по телефону
+                        и задаём собственнику уточняющие вопросы. Если все
+                        хорошо, объявление попадает на сайт.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion5"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion5" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Что такое автоматическая проверка?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Специально обученный робот проверяет объявления по
+                        ключевым словам - «собственник», «без посредников», «без
+                        комиссии», а также ищет дубликаты номера телефона и
+                        фотографии квартиры на других площадках и базах
+                        недвижимости. Специальный алгоритм проверяет, насколько
+                        цена соответствует площади и местоположению квартиры.
+                        Также робот выселяет все жалобы на объявления. Если всё
+                        соответствует, то объявление попадает на наш сайт
+                        БезРиелтора.ру.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion6"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion6" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Откуда берутся цены на квартиры?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Цену на свою квартиру каждый собственник устанавливает
+                        самостоятельно.</span
+                      >
+                    </label>
+                  </div>
+                </section>
+                <!-- Конец секции Часто Задаваемых вопросов -->
+
+                <section class="main_faq">
+                  <div class="main_header-block">
+                    <span class="red-line"></span>
+                    <span class="main_section-header"
+                      >Вопросы по тарифам и подбору недвижимости</span
+                    >
+                  </div>
+                  <div class="faq_main-body">
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.1"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.1" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Что входит в тариф?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Вы получаете доступ ко всей базе объявлений на три дня,
+                        неделю, месяц или два месяца и самостоятельно ищете
+                        квартиры и другую недвижимость. Во все тарифы входит
+                        проверка собственника по Росреестру. Последний тариф
+                        включает в себя услугу личного помощника: за Вами
+                        закрепляется личный менеджер, который осуществляет поиск
+                        недвижимости без посредников и скрытых комиссий.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.2"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.2" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Почему это платно?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Рынок аренды и продажи очень динамичен, на сайтах
+                        недвижимости ежедневно появляются тысячи объявлений. При
+                        этом появляются куча фейков, объявления со скрытой
+                        комиссией, от агентов и риелторов. На сайте
+                        БезРиелтора.ру Вы можете снять квартиру или любой другой
+                        объект недвижимости от собственника, все объявления,
+                        которые попадают на сайт проверяются обученным роботом
+                        или командой модераторов. Так Вы экономите время и
+                        деньги на пустой прозвон и на комиссию. Мы охватываем
+                        все открытые источники и базы недвижимости по аренде и
+                        продаже - ежедневно на сайте появляются тысячи новых
+                        объектов от собственников, в том числе квартиры и
+                        комнаты, которых нет на других сайтах.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.3"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.3" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Как оплатить доступ?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Выберите подходящий тариф и нажмите подключить, далее
+                        оплатите онлайн банковской картой.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.4"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.4" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Я купил доступ ради одной квартиры, но не смог
+                          дозвониться или квартира уже сдана. Что делать?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Рынок аренды очень динамичен, поэтому такое случается.
+                        Не расстраивайтесь! Новые объявления появляются каждый
+                        день, поэтому вы обязательно найдете отличный
+                        вариант.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.5"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.5" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Что такое подбор недвижимости от
+                          БезРиелтора.ру?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Услуга подбора недвижимости - это помощь в поиске
+                        квартиры, комнаты или дома от собственника по Вашим
+                        персональным критериям. Хотите снять квартиру у
+                        конкретного метро? Ищите жильё с детьми или животными?
+                        Без мебели? Или квартиру с дизайном в стиле лофт? Услуга
+                        подбора поможет среди тысяч объявления найти подходящий
+                        вариант от собственника и без комиссии.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.6"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.6" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >То есть Вы риелторы?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Нет, мы не риелторы :) Да, мы занимаемся поиском за
+                        Вас, но не просим комиссию (которая порой равна арендной
+                        плате). Вы платите фиксированную стоимость подбора, мы
+                        со дня оплаты осуществляем поиск по Вашим критериям. В
+                        Вашу подборку попадают только проверенные объекты и
+                        строго по Вашим критериям. Хотите найти квартиру с
+                        зелёными стенами? Без проблем, найдём, ещё и от
+                        собственника.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.7"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.7" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Зачем мне нужен подбор?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Экономия времени и денег. Все вопросы поиска и проверки
+                        недвижимости мы возьмём на себя. Будем искать жильё
+                        среди десятка отрытых источников - группы ВК и Фейсбук
+                        по аренде и продаже, по нашей базе (те, кто обращался в
+                        течении последних лет), на всей сайтах и базах
+                        недвижимости. Прозвон и проверку объявлений на
+                        актуальность мы тоже берём на себя, уточним все детали и
+                        критерии у собственника.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.8"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.8" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Можно ли оплатить услугу по факту заселения?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Нет, нельзя. Личный помощник начинает работать сразу же
+                        после оплаты, а первую персонализированную подборку
+                        квартир вы получите уже в день оплаты. Нет никакой одной
+                        волшебной базы, где все квартиры от собственников ждут,
+                        пока мы по ним позвоним. Поиск сложный и глубокий в
+                        множестве различных источников. Мы не агенство, а
+                        интернет сервис, поэтому оплаты по факту не
+                        предусмотрено. Мы оплачиваем инструменты поиска,
+                        модераторов и администраторов, тратим своё время на
+                        проверку каждого варианта, поиск и подбор.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.9"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.9" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Чем личный помощник отличается от риелтора?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Риелтор предлагает вам только те квартиры, за которые
+                        может получить комиссию, а личный помощник ищет для вас
+                        жилье по всем доступным на рынке предложениям.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.10"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.10" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Могу ли я поменять критерии поиска?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Смена параметров поиска обсуждается индивидуально. Мы
+                        идём на встречу, если смена параметров адекватная, если
+                        смена повлечёт за собой невозможность поиска (допустим
+                        Вы хотите найти квартиру в центре, но сильно снизили
+                        бюджет), то такое не приветствуется.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.11"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.11" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header">Какие гарантии?</span>
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Отзывы есть во всех группах и на сайте, наши контактные
+                        данные, реквизиты счета и юридического лица, а также
+                        условия всё прописано на сайте, так и в сообществах. Мы
+                        помогли уже не одной сотне людей найти квартиру в
+                        Москве, Санкт-Петербурге и других городах.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion12"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion12" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Как я могу начать подбор?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Оставляйте заявку нам на главной странице сайта
+                        (www.bezrealtora.ru), либо в Direct сообщества. Мы её
+                        согласовываем вместе.<br />
+
+                        Оплачиваете подбор через оплату сайта.<br />
+
+                        Каждый день (кроме выходных в неделю) присылаем варианты
+                        по Вашим параметрам от собственников. <br />
+
+                        Единоразовая оплата и до заселения мы будем присылать
+                        вам варианты ОТ СОБСТВЕННИКОВ, без комиссии, подходящие
+                        именно вам.</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion2.13"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion2.13" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Куда мне будут присылать варианты от
+                          собственника?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Присылать мы можем любым удобным способом - в WhatsApp,
+                        Telegram, на почту или через сайт. Как Вам удобнее
+                        :)</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion14"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion14" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Возвращаете ли Вы деньги?</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Eсли поиск по вашим параметрам вёлся и Вам присылались
+                        подходящие варианты - возврат денег не предусмотрен.
+                        <br />
+                        В исключительных случаях , если адекватно по вашей
+                        заявке не было прислано ни одного варианта - будет
+                        произведён полный возврат (но мы вряд ли изначально за
+                        такую заявку возьмёмся)..</span
+                      >
+                    </label>
+                    <input
+                      type="checkbox"
+                      name="main_faq-question"
+                      id="faqQuestion15"
+                      class="main_faq-checkbox"
+                    />
+                    <label for="faqQuestion15" class="faq_question-block">
+                      <div class="question-block_header">
+                        <span class="faq_question-header"
+                          >Оплата прошла, а доступ так и не появился.</span
+                        >
+                        <span class="faq_question-arrow"></span>
+                      </div>
+
+                      <span class="faq_answer-main"
+                        >Не волнуйтесь! Оплата проходит не сразу, порой надо
+                        подождать минут 15. Если доступ так и не появился,
+                        напишите нам на
+                        <a href="mailto:hello@bezrealtora.ru" class="faq_link"
+                          >hello@bezrealtora.ru</a
+                        ></span
+                      >
+                    </label>
+                  </div>
+                </section>
+                <section class="main_prefooter">
+                  <span class="prefooter_span">
+                    В базе БезРиелтора.ру Вы найдёте тысячи актуальных
+                    объявлений от собственников по аренде и продаже недвижимости
+                    в Москве и других городах России. Все представленные на
+                    сайте объекты проверены нашей командой модераторов и
+                    специальными алгоритмами сайта. Сайт БезРиелтора.ру поможет
+                    Вам снять, купить, продать, сдать квартиру или другой объект
+                    недвижимости без посредников и комиссии. Более подробнее о
+                    порядке предоставления платных услуг можно ознакомиться в
+                    пользовательском соглашении.
+                  </span>
+                </section>
               </div>
-              <div class="table-body_table-row">
-                <input
-                  type="radio"
-                  name="accessPeriod"
-                  id="7daysPeriod"
-                  class="period-checkbox"
-                />
-                <label for="7daysPeriod">
-                  <div class="table-row_table-data">7 дней</div>
-                </label>
-                <input
-                  type="radio"
-                  name="accessPeriod"
-                  id="30daysPeriod"
-                  class="period-checkbox"
-                />
-                <label for="30daysPeriod">
-                  <div class="table-row_table-data">30 дней</div>
-                </label>
-              </div>
-            </div>
-            <!-- Конец таблицы -->
-            <span id="ratePriceFirst" class="rate_price">599 ₽</span>
-            <form action="#" method="post" class="rate_form">
-              <input
-                type="button"
-                class="rate_button"
-                id="firstRateButton"
-                name="firstRateButton"
-                value="Подключить тариф"
-              />
-            </form>
-          </div>
-          <!-- Конец первой карточки -->
-          <!-- Вторая карточка тарифов -->
-          <div class="main_rate-card" id="secondCard">
-            <img
-              src="./Sources/Images/second-rate.svg"
-              alt=":("
-              class="main_rate-image"
-            />
-            <span class="rate_header"
-              >Индивидуальный подбор недвижимости от собственника</span
-            >
-            <span class="rate-description">
-              Тариф подойдет Вам, если Вы хотите, чтобы мы помогли Вам с поиском
-              недвижимости от собственника. Мы возьмем поиск, подбор и провеку
-              собственности на себя.
-            </span>
-            <ul class="rate_unordered-list">
-              <li class="unordered-list_list-item">
-                Доступ к объявлениям от собственников без ограничений
-              </li>
-              <li class="unordered-list_list-item">
-                Блокируем мошенников и агентов со скрытой коммисией
-              </li>
-              <li class="unordered-list_list-item">
-                Проверка собственника по Росреестру
-              </li>
-              <li class="unordered-list_list-item">
-                Договор аренды и другие документы для сделки
-              </li>
-              <li class="unordered-list_list-item">
-                Выделенный личный помощник (полностью займется поиском для Вас)
-              </li>
-              <li class="unordered-list_list-item">
-                Поиск квартиры по всем источникам
-              </li>
-              <li class="unordered-list_list-item">
-                Ежедневная подборка, проверка и обзвон квартир по Вашим
-                параметрам
-              </li>
-            </ul>
-            <div class="rate_select">
-              <select id="rateChosenCity" form="secondRateForm" required>
-                <option value="0" selected disabled>Выберете город</option>
-                <option value="1">Иркутск</option>
-                <option value="2">Москва</option>
-                <option value="3">Санкт-Петербург</option>
-                <option value="4">Казань</option>
-                <option value="5">Екатеринбург</option>
-                <option value="6">Новосибирск</option>
-                <option value="7">Самара</option>
-                <option value="8">Нижний Новгород</option>
-                <option value="9">Челябинск</option>
-                <option value="10">Омск</option>
-                <option value="11">Сочи</option>
-                <option value="12">Улан-Удэ</option>
-                <option value="13">Ростов-на-Дону</option>
-                <option value="14">Воронеж</option>
-                <option value="15">Волгоград</option>
-                <option value="16">Томск</option>
-                <option value="17">Пермь</option>
-                <option value="18">Саратов</option>
-              </select>
-            </div>
-            <span class="rate_price" id="ratePriceSecond">от 1.299 ₽</span>
-            <form
-              action="#"
-              method="post"
-              id="secondRateForm"
-              class="rate_form"
-            >
-              <input
-                type="button"
-                class="rate_button"
-                id="secondRateButton"
-                name="secondRateButton"
-                value="Подключить тариф"
-              />
-            </form>
-          </div>
-          <!-- Конец второй карточки -->
-        </div>
-        <div class="main_rate-toggle">
-            <div class="rate-toggle_first-toggle rate-toogle_toggle-checked "></div>
-            <div class="rate-toggle_second-toggle"></div>
-        </div>
-      </section>
-      <!-- Конец секции тарифов -->
-      <section class="main_coupon">
-        <div class="main_coupon-corner"></div>
-        <img
-          src="./Sources/Images/couponImage.png"
-          alt=""
-          class="main_coupon-image"
-        />
-        <div class="main_coupon-info">
-          <span class="main_coupon-header"
-            >Снимай/покупай недвижимость выгоднее с купоном от БезРиелтора</span
-          >
-          <span class="main_coupon-subheader"
-            >Найдите квартиру от собственника по лучшей цене:</span
-          >
-          <div class="main_coupon-activation">
-            <form action="#" method="post" class="coupon-activation_form">
-              <input
-                type="text"
-                name="activationCode"
-                id="activationCode"
-                value=""
-                class="coupon-activation_input"
-                placeholder="Введите код"
-              />
-              <input
-                type="submit"
-                name="submitCode"
-                id="submitCode"
-                value="Активировать купон"
-                class="coupon-activation_button"
-              />
-            </form>
-          </div>
-        </div>
-      </section>
-      <!-- Конец секции купона -->
-
-      <section class="main_benefits">
-        <div class="main_header-block">
-          <span class="red-line"></span>
-          <span class="main_section-header"
-            >Преимущества сервиса БезРиелтора.ру</span
-          >
-        </div>
-        <div class="benefits_description-blocks">
-          <div class="benefits_description-block first">
-            <div class="description-block_header-section">
-              <span class="header-section_header">Без посредников</span>
-              <img
-                src="./Sources/Icons/Men.svg"
-                alt=""
-                class="header-section_image"
-              />
-            </div>
-            <div class="description-block_main-section">
-              Мы проверяем каждое объявление, чтобы убедиться, что комиссии и
-              посредников нет.
-            </div>
-          </div>
-          <div class="benefits_description-block second">
-            <div class="description-block_header-section">
-              <span class="header-section_header">Без комиссии</span>
-              <img
-                src="./Sources/Icons/ZeroPercents.svg"
-                alt=""
-                class="header-section_image"
-              />
-            </div>
-            <div class="description-block_main-section">
-              Вы существенно экономите на комиссии риелтору
-            </div>
-          </div>
-          <div class="benefits_description-block third">
-            <div class="description-block_header-section">
-              <span class="header-section_header"
-                >Объявления только <br />от собственников</span
-              >
-              <img
-                src="./Sources/Icons/doneButton.svg"
-                alt=""
-                class="header-section_image"
-              />
-            </div>
-            <div class="description-block_main-section">
-              У нас размещаются объявления только от собственников
-            </div>
-          </div>
-          <div class="benefits_description-block fourth">
-            <div class="description-block_header-section">
-              <span class="header-section_header">Самая полная база</span>
-              <img
-                src="./Sources/Icons/fullBase.svg"
-                alt=""
-                class="header-section_image"
-              />
-            </div>
-            <div class="description-block_main-section">
-              Более 50.000 объявлений по аренде и продаже. Мы монитором все
-              агрегаторы и соцсети.
+              <div class="footer_tarifs"></div>
+              <script src="/app/js/tarif.js"></script>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Конец секции премуществ -->
-
-      <section class="main_faq">
-        <div class="main_header-block">
-          <span class="red-line"></span>
-          <span class="main_section-header">Часто задаваемые вопросы</span>
-        </div>
-        <div class="faq_main-body">
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion1"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion1" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">Что такое БезРиелтора?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Это сервис по аренде и покупке недвижимости от собственников. У
-              нас Вы можете снять, купить или подобрать квартиру/комнату или
-              любой другой объект недвижимости. Если Вы собственник, то сдать
-              или продать Вы можете бесплатно. Также мы разместим Ваше
-              объявления в наших группах.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >В каких городах Вы работаете?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Объявления на сайте представлены в 14 городах России: <br />
-              в Москве, Санкт-Петербурге, Екатеринбурге, Казани, Новосибирске,
-              Челябинске, Омске, Иркутске, Сочи, Саратове, Перми, Воронеже,
-              Волгограде, Нижнем Новгороде, Ростове-на-Дону, Томске, Улан-Удэ. А
-              также снять в аренду или купить квартиру можно в Подмосковных
-              городах - в Красногорске, Люберцах, Мытищах, Химках, Реутове,
-              Королёве, Балашихе, Долгопрудном, Подольске, Лобне, Зеленограде и
-              других.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion3"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion3" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Откуда Вы берёте объявления?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Объявления по аренде и продаже попадают на сайт несколькими
-              путями:<br />
-              Собственники самостоятельно загружают объявления о сдаче или
-              продаже недвижимости, после чего оно тщательно проверяется
-              модератором. Мы прозваниваем объявление и проверяем всю
-              информацию. При необходимости заказываем выписку из ЕГРН. Если всё
-              в порядке и соответствует действительности, то объявление
-              появляется на сайте. Также квартиры/комнаты и другие объекты нам
-              присылают в VK, Инстаграм и Телеграм, эти объекты тоже тщательно
-              проверяется и если всё ок, то выгружается на сайт. ⁃ Наш
-              специальный робот собирает все объявления по всем базам аренды и
-              продаже жилья от собственников и выгружает их автоматически на
-              сайт. В процессе объявление сначала проверяется роботом -
-              сравниваются номера телефонов, фотографии и текст. После выгрузки,
-              в порядке очередности объявление проверяется ещё раз
-              модератором.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion4"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion4" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Как вы проверяете квартиры?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Сначала мы проверяем телефон по внутренней базе телефонов
-              риелторов. Если его нет, мы звоним по телефону и задаём
-              собственнику уточняющие вопросы. Если все хорошо, объявление
-              попадает на сайт.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion5"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion5" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Что такое автоматическая проверка?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Специально обученный робот проверяет объявления по ключевым
-              словам - «собственник», «без посредников», «без комиссии», а также
-              ищет дубликаты номера телефона и фотографии квартиры на других
-              площадках и базах недвижимости. Специальный алгоритм проверяет,
-              насколько цена соответствует площади и местоположению квартиры.
-              Также робот выселяет все жалобы на объявления. Если всё
-              соответствует, то объявление попадает на наш сайт
-              БезРиелтора.ру.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion6"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion6" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Откуда берутся цены на квартиры?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Цену на свою квартиру каждый собственник устанавливает
-              самостоятельно.</span
-            >
-          </label>
-        </div>
-      </section>
-      <!-- Конец секции Часто Задаваемых вопросов -->
-
-      <section class="main_faq">
-        <div class="main_header-block">
-          <span class="red-line"></span>
-          <span class="main_section-header"
-            >Вопросы по тарифам и подбору недвижимости</span
-          >
-        </div>
-        <div class="faq_main-body">
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.1"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.1" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">Что входит в тариф?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Вы получаете доступ ко всей базе объявлений на три дня, неделю,
-              месяц или два месяца и самостоятельно ищете квартиры и другую
-              недвижимость. Во все тарифы входит проверка собственника по
-              Росреестру. Последний тариф включает в себя услугу личного
-              помощника: за Вами закрепляется личный менеджер, который
-              осуществляет поиск недвижимости без посредников и скрытых
-              комиссий.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.2"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.2" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">Почему это платно?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Рынок аренды и продажи очень динамичен, на сайтах недвижимости
-              ежедневно появляются тысячи объявлений. При этом появляются куча
-              фейков, объявления со скрытой комиссией, от агентов и риелторов.
-              На сайте БезРиелтора.ру Вы можете снять квартиру или любой другой
-              объект недвижимости от собственника, все объявления, которые
-              попадают на сайт проверяются обученным роботом или командой
-              модераторов. Так Вы экономите время и деньги на пустой прозвон и
-              на комиссию. Мы охватываем все открытые источники и базы
-              недвижимости по аренде и продаже - ежедневно на сайте появляются
-              тысячи новых объектов от собственников, в том числе квартиры и
-              комнаты, которых нет на других сайтах.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.3"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.3" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">Как оплатить доступ?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Выберете подходящий тариф и нажмите подключить, далее оплатите
-              онлайн банковской картой.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.4"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.4" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Я купил доступ ради одной квартиры, но не смог дозвониться или
-                квартира уже сдана. Что делать?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Рынок аренды очень динамичен, поэтому такое случается. Не
-              расстраивайтесь! Новые объявления появляются каждый день, поэтому
-              вы обязательно найдете отличный вариант.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.5"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.5" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Что такое подбор недвижимости от БезРиелтора.ру?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Услуга подбора недвижимости - это помощь в поиске квартиры,
-              комнаты или дома от собственника по Вашим персональным критериям.
-              Хотите снять квартиру у конкретного метро? Ищите жильё с детьми
-              или животными? Без мебели? Или квартиру с дизайном в стиле лофт?
-              Услуга подбора поможет среди тысяч объявления найти подходящий
-              вариант от собственника и без комиссии.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.6"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.6" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">То есть Вы риелторы?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Нет, мы не риелторы :) Да, мы занимаемся поиском за Вас, но не
-              просим комиссию (которая порой равна арендной плате). Вы платите
-              фиксированную стоимость подбора, мы со дня оплаты осуществляем
-              поиск по Вашим критериям. В Вашу подборку попадают только
-              проверенные объекты и строго по Вашим критериям. Хотите найти
-              квартиру с зелёными стенами? Без проблем, найдём, ещё и от
-              собственника.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.7"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.7" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">Зачем мне нужен подбор?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Экономия времени и денег. Все вопросы поиска и проверки
-              недвижимости мы возьмём на себя. Будем искать жильё среди десятка
-              отрытых источников - группы ВК и Фейсбук по аренде и продаже, по
-              нашей базе (те, кто обращался в течении последних лет), на всей
-              сайтах и базах недвижимости. Прозвон и проверку объявлений на
-              актуальность мы тоже берём на себя, уточним все детали и критерии
-              у собственника.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.8"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.8" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Можно ли оплатить услугу по факту заселения?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Нет, нельзя. Личный помощник начинает работать сразу же после
-              оплаты, а первую персонализированную подборку квартир вы получите
-              уже в день оплаты. Нет никакой одной волшебной базы, где все
-              квартиры от собственников ждут, пока мы по ним позвоним. Поиск
-              сложный и глубокий в множестве различных источников. Мы не
-              агенство, а интернет сервис, поэтому оплаты по факту не
-              предусмотрено. Мы оплачиваем инструменты поиска, модераторов и
-              администраторов, тратим своё время на проверку каждого варианта,
-              поиск и подбор.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.9"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.9" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Чем личный помощник отличается от риелтора?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Риелтор предлагает вам только те квартиры, за которые может
-              получить комиссию, а личный помощник ищет для вас жилье по всем
-              доступным на рынке предложениям.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.10"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.10" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Могу ли я поменять критерии поиска?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Смена параметров поиска обсуждается индивидуально. Мы идём на
-              встречу, если смена параметров адекватная, если смена повлечёт за
-              собой невозможность поиска (допустим Вы хотите найти квартиру в
-              центре, но сильно снизили бюджет), то такое не
-              приветствуется.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.11"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.11" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">Какие гарантии?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Отзывы есть во всех группах и на сайте, наши контактные данные,
-              реквизиты счета и юридического лица, а также условия всё прописано
-              на сайте, так и в сообществах. Мы помогли уже не одной сотне людей
-              найти квартиру в Москве, Санкт-Петербурге и других городах.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion12"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion12" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">Как я могу начать подбор?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Оставляйте заявку нам на главной странице сайта
-              (www.bezrealtora.ru), либо в Direct сообщества. Мы её
-              согласовываем вместе.<br />
-
-              Оплачиваете подбор через оплату сайта.<br />
-
-              Каждый день (кроме выходных в неделю) присылаем варианты по Вашим
-              параметрам от собственников. <br />
-
-              Единоразовая оплата и до заселения мы будем присылать вам варианты
-              ОТ СОБСТВЕННИКОВ, без комиссии, подходящие именно вам.</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion2.13"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion2.13" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Куда мне будут присылать варианты от собственника?</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Присылать мы можем любым удобным способом - в WhatsApp, Telegram,
-              на почту или через сайт. Как Вам удобнее :)</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion14"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion14" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header">Возвращаете ли Вы деньги?</span>
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Eсли поиск по вашим параметрам вёлся и Вам присылались подходящие
-              варианты - возврат денег не предусмотрен. <br />
-              В исключительных случаях , если адекватно по вашей заявке не было
-              прислано ни одного варианта - будет произведён полный возврат (но
-              мы вряд ли изначально за такую заявку возьмёмся)..</span
-            >
-          </label>
-          <input
-            type="checkbox"
-            name="main_faq-question"
-            id="faqQuestion15"
-            class="main_faq-checkbox"
-          />
-          <label for="faqQuestion15" class="faq_question-block">
-            <div class="question-block_header">
-              <span class="faq_question-header"
-                >Оплата прошла, а доступ так и не появился.</span
-              >
-              <span class="faq_question-arrow"></span>
-            </div>
-
-            <span class="faq_answer-main"
-              >Не волнуйтесь! Оплата проходит не сразу, порой надо подождать
-              минут 15. Если доступ так и не появился, напишите нам на
-              <a href="hello@bezrealtora.ru" class="faq_link"
-                >hello@bezrealtora.ru</a
-              ></span
-            >
-          </label>
-        </div>
-      </section>
-      <section class="main_prefooter">
-        <span class="prefooter_span">
-          В базе БезРиелтора.ру Вы найдёте тысячи актуальных объявлений от
-          собственников по аренде и продаже недвижимости в Москве и других
-          городах России. Все представленные на сайте объекты проверены нашей
-          командой модераторов и специальными алгоритмами сайта. Сайт
-          БезРиелтора.ру поможет Вам снять, купить, продать, сдать квартиру или
-          другой объект недвижимости без посредников и комиссии. Более подробнее
-          о порядке предоставления платных услуг можно ознакомиться в
-          пользовательском соглашении.
-        </span>
-      </section>
+      </div>
     </div>
-
-    <!-- FOOTER block -->
-    <script src="./Scripts/index-script.js"></script>
   </body>
 </html>
