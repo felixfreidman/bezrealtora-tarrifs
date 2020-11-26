@@ -14,8 +14,121 @@ body {
 }
 /* Версия по умолчанию, на экраны 1376х1176 */
 /* Стили самой страницы */
-/* Версия по умолчанию, на экраны 1376х1176 */
-/* Стили самой страницы */
+/* Начало стилей для заголовка страницы ----------------------------------> */
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0%;
+}
+.header-tarifs {
+  margin-bottom: 51px;
+}
+.header_header-top {
+  height: fit-content;
+  max-height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 0px;
+  background-color: #fff;
+}
+.header-top_navigation {
+  display: flex;
+  width: 60%;
+  align-items: center;
+}
+
+.section {
+  margin-right: 50px;
+}
+
+.choseCity-select {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+select#chosenCity {
+  flex: none;
+  background-color: transparent;
+  width: 100%;
+  z-index: 3;
+  margin-right: 0;
+  padding: 0;
+  border-radius: 0%;
+  font-size: 14px;
+}
+.navigation_logo-section {
+  display: flex;
+}
+
+.logo-section_choseCity-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 6px;
+}
+
+.header-top_data-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.data-section_apply-button {
+  outline: none;
+  background-color: #e82431;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  line-height: 0px;
+  height: 40px;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.apply-button_plus {
+  margin-right: 15px;
+}
+
+.data-section_credentials-section {
+  display: flex;
+  align-items: center;
+}
+
+.credentials-section_image {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+.header_header-bottom {
+  background-image: url("../img/tarif/header-image.png");
+  padding: 190px 220px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+.header-bottom_text-top {
+  font-weight: bold;
+  color: white;
+  font-size: 33px;
+  margin-bottom: 10px;
+}
+
+.header-bottom_text-bottom {
+  color: white;
+  font-size: 24px;
+}
+
+
+
+/* <---------------------------------- Конец стилей для заголовка  страницы  */
+/* Начало стилей для главной части страницы ----------------------------------> */
 .main_tarifs {
   display: flex;
   flex-direction: column;
@@ -177,14 +290,14 @@ ul {
   justify-content: center;
   align-items: center;
   padding-left: 10px;
-  width: 50%;
+  width: 40%;
   border-radius: 5px;
 }
 
 .selling-badge_span {
   text-align: center;
-  margin-bottom: 5px;
   color: black;
+  font-size: 12px;
 }
 
 label:hover {
@@ -486,7 +599,7 @@ select {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 97%;
   min-height: 50px;
   height: fit-content;
   padding: 20px;
@@ -573,7 +686,6 @@ select {
   font-size: 18px;
   line-height: 27px;
 }
-
 @media (min-width: 1024px) and (max-width: 1200px) {
   .main_tarifs {
     padding: 51px 80px 114px 80px;
@@ -1026,3 +1138,7 @@ select {
     font-size: 14px;
   }
 }
+
+/* <---------------------------------- Конец стилей для главной части страницы  */
+/* Начало стилей для подвала страницы ----------------------------------> */
+/* <---------------------------------- Конец стилей для подвала страницы  */
