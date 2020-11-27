@@ -1,0 +1,92 @@
+/* Начало стилей для подвала страницы ----------------------------------> */
+.footer_tarifs {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 150px 17px 150px;
+  }
+  
+  .footer_support-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 20px;
+  }
+  
+  .support-section_logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .support-section_logo-section>img {
+    margin-right: 8px;
+  }
+  
+  .support-section_navigation {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navigation_link, .navigation_link:visited {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .navigation_link:hover, .navigation_link:active {
+    color: #E82431;
+  }
+  
+  .footer_eastate-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+  }
+  
+  .footer_about-company {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 13px;
+    line-height: 21px;
+  }
+  
+  .about-company_company {
+    max-width: 68%;
+    border-right: 1px solid #d9d9d9;
+  }
+  
+  .about-company_law-info {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #d9d9d9;
+  }
+  
+  .about-company_social-section {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-section_networks {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 12px;
+  }
+
+  .footer_licence-section {
+      margin-top: 17px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .licence-section_text {
+      font-size: 12px;
+      color: #808080;
+  }
+/* <---------------------------------- Конец стилей для подвала страницы  */  
